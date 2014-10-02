@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         sass: {
             dev: {
                 files: {
-                    "www/assets/css/style.css": "<%= paths.sass %>/style.scss"
+                    "<%= paths.css %>/style.css": "<%= paths.sass %>/style.scss"
                 },
                 options: {
                     sourceComments: 'none',
@@ -57,13 +57,9 @@ module.exports = function(grunt) {
 
                     // custom selectors
                     // used for themed icons
-                    customselectors: {
-                        "route-stop": [".route > .route__item:after"],
-                        "roadworks": [".route > .route__item.route__item--roadworks:after"],
-                        "warning": [".route > .route__item.route__item--warning:after"],
-                        "bg-hatched": [".breakline--hatched:before, .subnav__nav:before, .hatched-line:before, .level-1 .traffic-info__header:after"],
-                        "mask-traffic-figure": [".route .route__figure:after"]
-                    },
+                    // customselectors: {
+                    //     "route-stop": [".route > .route__item:after"]
+                    // },
 
                     previewhtml: "icons-preview.html",
 
@@ -86,17 +82,17 @@ module.exports = function(grunt) {
             main: {
                 options: {
                 },
-                src: 'www/css/screen.css'
+                src: '<%= paths.css %>/style.css'
             }
         },
 
         cssmin: {
             dist: {
                 options: {
-                    banner: '/* mysuper */'
+                    banner: '/* Starter Kit */'
                 },
                 files: {
-                    'www/css/screen.css': ['www/css/screen.css']
+                    '<%= paths.css %>/style.css': ['<%= paths.css %>/style.css']
                 }
             }
 
@@ -108,7 +104,7 @@ module.exports = function(grunt) {
             },
             your_target: {
                 files: {
-                    'www/css/screen.css': ['www/css/screen.css']
+                    '<%= paths.css %>/style.css': ['<%= paths.css %>/style.css']
                 }
             }
         }
@@ -123,25 +119,19 @@ module.exports = function(grunt) {
         if( dep.substring( 0, 6 ) === 'grunt-' ) grunt.loadNpmTasks( dep );
     });
 
-
-
     grunt.registerTask("css", [
         "sass",
         "autoprefixer"
     ]);
 
-
-
     grunt.registerTask("icon", [
         "grunticon_pigment"
     ]);
-
 
     grunt.registerTask("dist", [
         "css",
         "cssmin:dist"
     ]);
-
 
     grunt.registerTask("all-the-things", [
         "icon",
@@ -150,8 +140,5 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask("all", ["all-the-things"]);
-    grunt.registerTask("boom", ["all-the-things"]);
-    grunt.registerTask("it-is-done", ["all-the-things"]);
-    grunt.registerTask("smash", ["all-the-things"]);
 
 };
