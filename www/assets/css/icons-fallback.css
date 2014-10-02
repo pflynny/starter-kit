@@ -1,10 +1,4 @@
 
-.i-arrow-lrg {
-    background-image: url('png/arrow-lrg.png');
-    background-repeat: no-repeat;
-}
-
-
 .i-arrow-sml {
     background-image: url('png/arrow-sml.png');
     background-repeat: no-repeat;
@@ -17,44 +11,8 @@
 }
 
 
-.i-facebook-lrg {
-    background-image: url('png/facebook-lrg.png');
-    background-repeat: no-repeat;
-}
-
-
-.i-facebook-sml {
-    background-image: url('png/facebook-sml.png');
-    background-repeat: no-repeat;
-}
-
-
-.i-icon-arrivals {
-    background-image: url('png/icon-arrivals.png');
-    background-repeat: no-repeat;
-}
-
-
-.i-icon-car {
-    background-image: url('png/icon-car.png');
-    background-repeat: no-repeat;
-}
-
-
-.i-icon-departures {
-    background-image: url('png/icon-departures.png');
-    background-repeat: no-repeat;
-}
-
-
 .i-icon-external-link {
     background-image: url('png/icon-external-link.png');
-    background-repeat: no-repeat;
-}
-
-
-.i-illustration-people {
-    background-image: url('png/illustration-people.png');
     background-repeat: no-repeat;
 }
 
@@ -65,44 +23,8 @@
 }
 
 
-.i-text-at-airport {
-    background-image: url('png/text-at-airport.png');
-    background-repeat: no-repeat;
-}
-
-
-.i-text-whats-new {
-    background-image: url('png/text-whats-new.png');
-    background-repeat: no-repeat;
-}
-
-
-.i-text-whats-new2 {
-    background-image: url('png/text-whats-new2.png');
-    background-repeat: no-repeat;
-}
-
-
-.i-twitter-lrg {
-    background-image: url('png/twitter-lrg.png');
-    background-repeat: no-repeat;
-}
-
-
 .i-twitter-sml {
     background-image: url('png/twitter-sml.png');
-    background-repeat: no-repeat;
-}
-
-
-.i-youtube-lrg {
-    background-image: url('png/youtube-lrg.png');
-    background-repeat: no-repeat;
-}
-
-
-.i-youtube-sml {
-    background-image: url('png/youtube-sml.png');
     background-repeat: no-repeat;
 }
 
