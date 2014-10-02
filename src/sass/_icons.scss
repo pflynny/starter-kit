@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    #ICONS
+\*------------------------------------*/
+
+
+%i {
+    @extend %inline-block;
+    width: 1em;
+    height: 1em;
+    background-size: cover;
+    //display: inline-block;
+    vertical-align: middle;
+}
+
+.i {
+    
+    @extend %i;
+    .icon-text &,
+    .btn--icon & {
+        @extend %mr-xs;
+    }
+    .icon-text--rev &,
+    .btn--icon-rev & {
+        @extend %ml-xs;
+    }
+}
+
+
+
+// -----------------------------------------------------------------------------
+// Icon colouring
+// -----------------------------------------------------------------------------
+
+/* colourised icons */
+%i--link,
+%i--blue { background-position: 0 $icon-bg-blue; }
+%i--dark-blue { background-position: 0 $icon-bg-dark-blue; }
+%i--grey { background-position: 0 $icon-bg-grey; }
+%i--dark-grey { background-position: 0 $icon-bg-dark-grey; }
+%i--green { background-position: 0 $icon-bg-green; }
+%i--red { background-position: 0 $icon-bg-red;}
+%i--orange { background-position: 0 $icon-bg-orange; }
+%i--white { background-position: 0 $icon-bg-white; }
+
+.i--dark-blue { @extend %i--dark-blue; }
+.i--blue { @extend %i--blue; }
+.i--grey { @extend %i--grey; }
+.i--dark-grey { @extend %i--dark-grey; }
+.i--red { @extend %i--red; }
+.i--orange { @extend %i--orange; }
+.i--green { @extend %i--green; }
+.i--white { @extend %i--white; }
+
+
+// -----------------------------------------------------------------------------
+// Icon Sizing
+// -----------------------------------------------------------------------------
+
+.i--large {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.i--xlarge {
+    width: 2em;
+    height: 2em;
+}

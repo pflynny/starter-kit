@@ -1,1110 +1,149 @@
-// Theme colours
-$theme-color: #014d8c;
-$space: 2em;
-$r-small: .25em;
-$r-tiny: .25em;
-$color-font-light: #888;
+@charset "utf-8";
 
+/**
+*
+* CONTENTS
+*
+* Config .............. Globally-available variables and config.
+*
+* Mixins............... Useful mixins.
+*
+* Utilities ............. Globally-available extends and core classes
+*
+* Typography ................ Text sizes, Heirarchy, H1–H6 styles..
+*
+* Layout .............. Layout modifiers along with vertical and horizontal spacing.
+*
+* Icons ............... Icons 
+*
+* Themes .............. Themes 
+*
+*/
+
+
+@import "config";
 @import "mixins";
 
-* {
-    box-sizing: border-box;
-}
-
 html {
-    background: #fff;
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    height: 100%;
+    min-height: 100%;
+    background-color:$base-bg-color;
 }
 
 body {
     margin: 0;
-    font-family: "source sans pro", helvetica, sans-serif;
-    line-height: 1.5;
-    color: #333;
+    background-color: #f0f0f0;
+    color: $base-font-color;
+    font-family: $sans-serif-stack;
+    line-height: $base-line-height;
+    position: relative;
+    min-height: 100%;
 }
 
+// Remove border when inside `a` element in IE 8/9.
+img { border: 0;}
 
-/**
- * ----------------------------------------------------------------------------
- * Typography
- * ----------------------------------------------------------------------------
- */
+@import "spacing";
+@import "icons";
+@import "typography";
+@import "layout";
+@import "themes";
 
-h1 {
-    font-size: 48px;
-    font-size: 3rem;
-    font-weight: 300;
-    margin-top: 0;
-    margin-bottom: $space/2;
-    line-height: 1.4;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
-
-h2 {
-    font-size: 36px;
-    font-size: 2.25rem;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: $space/2;
-}
-
-
-h3 {
-    font-size: 24px;
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: $space/4;
-}
-
-h4 {
-    margin-bottom: $space/4;
-}
-
-h4, p, dl, table, ul, ol {
-    margin-top: 0;
-    font-size: 18px;
-    font-size: 1.125rem;
-}
-
-
-h5 {
-    margin-top: 0;
-    font-size: 16px;
-    font-size: 1rem;
-    margin-bottom: $space/4;
-}
-
-
-h6 {
-    margin-top: 0;
-    font-size: 14px;
-    font-size: .875rem;
-    margin-bottom: $space/2;
-}
-
-
-p {
-    margin-top: 0;
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
-}
-
-
-a {
-    text-decoration: none;
-    color: $theme-color;
-    &:hover {
-        color: lighten($theme-color, 10%);
-        border-color: lighten($theme-color, 20%);
-    }
-}
-
-
-blockquote {
-    margin-left: 0;
-    padding-left: 1.5em;
-    border-left: solid 3px #eee;
-
-    font-size: 20px;
-    font-size: 1.25rem;
-    color: $color-font-light;
-
-    // cite {
-    //     margin-top: 16px;
-    //     margin-top: 1rem;
-    //     display: block;
-    // }
-}
-
-
-cite {
-    &:before {
-        content: "\2014\00a0";
-        font-weight: 300;
-    }
-    font-size: 14px;
-    font-size: .875rem;
-    color: #666;
-}
-
-small {
-    color: #888;
-}
-
-
-table {
-    table-layout: fixed;
-    padding: 0;
-    border-collapse: collapse;
-    margin-bottom: $space/1.3333333333333;
-
-    thead {
-        font-weight: 600;
-    }
-    td {
-        border: solid 1px #ddd;
-        padding: $space/4 $space/2;
-    }
+// Accessibility 101
+*:focus {
+    outline: solid 3px $color-focus;
 }
 
 
 
 
-    .table--zebra {
-        tbody tr:nth-child(odd) {
-            background-color: #fafafa;
-        }
-    }
+// -----------------------------------------------------------------------------
+// utilities -- typography
+// -----------------------------------------------------------------------------
 
+.font-bold { font-weight:$font-bold; }
+.font-light { font-weight:$font-light; }
+.font-normal {font-weight:$font-normal;}
 
-    .table--split {
+.uppercase { text-transform:uppercase; }
+.lowercase { text-transform:lowercase; }
+
+.text-center { text-align:center; }
+.text-left { text-align:left;}
+.text-right { text-align:right;}
+
+.text-right--medium {
+    @include medium {
         text-align: right;
-        width: 100%;
-
-        td {
-            width: 50%;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            vertical-align: top;
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        tr > :first-child {
-            text-align: left;
-            font-weight: 600;
-        }
-
-        tr:last-child > td {
-            border-bottom: none;
-        }
-    }
-
-
-
-
-/**
- * List styles
- * ----------------------------------------------------------------------------
- */
-
-
-dl, ul, ol {
-    margin-top: 0;
-    margin-bottom: $space/1.3333333333333;
-}
-
-ul,
-ol {
-    ul, ol {
-        margin-bottom: $space/4;
-        padding-top: $space/4;
     }
 }
 
+// -----------------------------------------------------------------------------
+// utilities -- layout
+// -----------------------------------------------------------------------------
+.block-element { display:block;}
 
-
-
-
-/**
- * Definition lists
- */
-
-dl {
-
-}
-    dt {
-        font-weight: 600;
-    }
-
-    dd {
-        margin-left: 0;
-        margin-bottom: $space/2;
-    }
-
-
-.dl--inline {
-    dd, dt {
-        display: inline;
-        margin: 0;
-    }
-
-    dt:after {
-        content: "\2014";
-        margin-left: $space/8;
-        color: #999;
-        font-weight: 300;
-    }
-
-    // dd:after {
-    //     content: '\A';
-    //     white-space: pre;
-    // }
-}
-
-
-
-
-
-/**
- * Throws list items into a collection of inline-blocks
- */
-
-.nav { /* ul, ol */
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style: none;
-    padding-left: 0;
-    font-size: medium;
-
-    & > li {
+.prepend{
+    &:before{
+        content: attr(data-prepend);
         display: inline-block;
-        vertical-align: middle;
     }
 }
 
-/**
- * Extends `.nav {}`
- *
- * Adds spacing between a bunch of inline block nav children.
- *
- */
-.nav--links {
-    & > li {
-        margin-right: .5em;
-        line-height: 1;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
-
-
-
-
-/**
- * ----------------------------------------------------------------------------
- * Typography continued
- * ----------------------------------------------------------------------------
- */
-
-.default {
-    font-size: medium;
-}
-
-.intro {
-    font-size: 20px;
-    font-size: 1.25rem;
-    // margin-bottom: 1em;
-    line-height: 1.4;
-}
-
-.para {
-    font-size: 18px;
-    font-size: 1.125rem;
-    margin-bottom: 1.5em;
-}
-
-.small {
-    font-size: 14px;
-    font-size: .875rem;
-}
-
-
-/**
- * Ensure that leading/trailing rules can have their padding overridden
- * by structural classes further down the stylesheet.
- */
-
-.leading-rule {
-    border-top: solid 1px rgba(0,0,0,.2);
-    padding-top: 1em;
-}
-
-.trailing-rule {
-    padding-bottom: 1em;
-    border-bottom: solid 1px rgba(0,0,0,.2);
-}
-
-
-
-
-
-
-
-
-
-
-/**
- * ---------------------------------------------------------------------------
- * Buttons
- * ---------------------------------------------------------------------------
- *
- * Can be applied to any element
- * Will become an inline-block
- *
- *
- * Combine with other modifiers for the styling, eg:
- *
- *      <span class="btn btn-primary"></span>
- *
- *
- * 1. Buttons shouldn't wordwrap.
- * 2. Deal with styling for <button> element.
- *
- *
- * Note:
- *
- * Applying button classes to an <input type="submit"> element can be
- * unpredictable (especially in Firefox). Use a <button type="submit"></button>
- * instead to avoid weird line-height issues.
- *
- */
-
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: 2.5;
-    white-space: nowrap;            /* [1] */
-    -webkit-appearance: none;       /* [2] */
-       -moz-appearance: none;
-        -ms-appearance: none;
-         -o-appearance: none;
-            appearance: none;
-    border: none;
-    padding-left: $space/2;
-    padding-right: $space/2;
-    border-radius: $r-small;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0;
-
-    &:hover {
-        color: inherit;
-    }
-}
-
-
-
-
-/**
- * Button modifiers
- * ---------------------------------------------------------------------------
- */
-
-.btn--small {
-    padding-left: $space/4;
-    padding-right: $space/4;
-    line-height: 2;
-    border-radius: $r-tiny;
-}
-
-
-.btn--large {
-    line-height: 3;
-    padding-left: $space;
-    padding-right: $space;
-
-}
-
-.btn--block {
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-
-
-.btn--circle {
-    line-height: 1.75;
-    padding-left: .75em;
-    padding-right: .75em;
-}
-
-
-
-/**
- * Button themes
- * ---------------------------------------------------------------------------
- */
-
-.btn-primary {
-    background-color: $theme-color;
-    color: #fff;
-    &:hover {
-        background-color: darken($theme-color, 10%);
-        color: #fff;
-    }
-}
-
-
-.btn-secondary {
-    background-color: #999;
-    color: #fff;
-    &:hover {
-        background-color: #666;
-        color: #fff;
-    }
-}
-
-.btn-tertiary {
-    border: solid 1px rgba(0,0,0,0.25);
-    color: #666;
-    &:hover {
-        color: #333;
-        border-color: rgba(0,0,0,0.4);
-
-    }
-}
-
-
-.btn-outline {
-    border: solid 1px rgba(255,255,255,0.5);
-    color: #fff;
-    &:hover {
-        color: $theme-color;
-        background: #fff;
-        border-color: #fff;
-    }
-}
-
-
-
-/**
- * Apply the active state to buttons last to ensure color is respected.
- */
-.btn:active {
-    background-color: #333;
-    color: #fff;
-}
-
-
-/**
- * Button Groups
- * ---------------------------------------------------------------------------
- */
-
-
-.btn-group {
-    @include small-only {
-        & > .btn {
-            margin-bottom: $space/2;
-        }
-    }
-    @include medium {
-        & > .btn {
-            margin-right: $space/4;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-}
-
-
-
-/**
- * ---------------------------------------------------------------------------
- * Page components
- * ---------------------------------------------------------------------------
- */
-
-
-
-/**
- * Extends `.nav {}`
- *
- * Tabbing is achieved through a selected/deselected bottom border. Add/remove here.
- */
-
-.tabs {
-    padding-bottom: .5em;
-}
-
-    .tab {
-        padding-bottom: .25em;
-        color: $color-font-light;
-        border-bottom: solid 2px #eee;
-    }
-
-
-    .tab--active {
-        color: #222;
-        border-bottom-color: #aaa;
-    }
-
-
-
-
-
-/**
- * Avatars
- * ---------------------------------------------------------------------------
- */
-
-.circle, .avatar, .btn--circle {
-    border-radius: 50em;
-    display: inline-block;
-    overflow: hidden;
-}
-
-
-
-.circle {
-    width: 100%;
-    padding-bottom: 100%;
-    height: 0;
-}
-
-
-.avatar {
-
-    background-color: #ddd;
-
-    min-width: 2em;
-    min-height: 2em;
-
-    & > img {
-        display: block;
-        width: 100%;
-    }
-}
-
-
-
-.team {
-    display: inline-block;
-    margin-right: $space/2;
-    margin-bottom: $space/4;
-
-    img {
-        transition: transform linear .1s;
-        -webkit-backface-visibility: hidden;
-        transform: scale(1);
-    }
-
-    &:hover {
-        img {
-            transform: scale(1.03);
-        }
-    }
-}
-
-
-    .team__image,
-    .team__name {
-        text-align: left;
+.append{
+    &:after{
+        content: attr(data-append);
         display: inline-block;
-        vertical-align: middle;
-    }
-
-    .team__image {
-        width: 4em;
-        height: 4em;
-        margin-right: .75em;
-        overflow: hidden;
-        transform: scale(1);
-    }
-
-
-    .team__role {
-        color: $color-font-light;
-    }
-
-
-
-
-
-
-/**
- * Media blocks
- * ---------------------------------------------------------------------------
- */
-
-.media {
-    overflow: hidden;
-    margin-bottom: 32px;
-    margin-bottom: 2rem;
-}
-
-.media--squishy {
-    img {
-        width: 100%;
     }
 }
 
-
-    .media__image {
-        float: left;
-        margin-right: $space;
-
-        > img {
-            display: block;
-
-        }
-    }
-
-    .media__body {
-            }
-
-
-/**
- * Inset panels/cards
- * ---------------------------------------------------------------------------
- */
-
-.card {
-    border-radius: $r-small;
-    padding-top: 1.25em;
-    padding-bottom: 1.25em;
-
-    margin-bottom: $space;
-    border: solid 1px #e2e2e2;
-    background: #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-
-    padding-left: $space/2;
-    padding-right: $space/2;
-
-
-    @include medium {
-        padding-left: $space;
-        padding-right: $space;
-    }
-}
-
-
-
-
-/**
- * ---------------------------------------------------------------------------
- * Forms
- * ---------------------------------------------------------------------------
- */
-
-fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-.field {
-    border: solid 1px #ddd;
-    padding: .5em .5em;
-    font-size: inherit;
-    appearance: none;
-    width: 100%;
-    background: #eee;
-    border-radius: .125em;
-}
-
-
-.field--text,
-textarea {
-    font-family: inherit;
-}
-
-.field:focus {
-    outline: none;
-    border-color: $theme-color;
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
-}
-
-
-.label {
-    margin-bottom: $space/2;
-    display: inline-block;
-    width: 100%;
-}
-
-
-
-
-
-
-
-/**
- * ---------------------------------------------------------------------------
- * Structure
- * ---------------------------------------------------------------------------
- */
-
-
-.wrapper {
-    max-width: 800px;
-    max-width: 50rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.prose {
-    max-width: 36em;
-}
-
-.column {
-    padding-left: $space/2;
-    padding-right: $space/2;
-    text-align: left;
-
-    .grid {
-        margin-left: -1rem;
-        margin-right: -1rem;
-    }
-}
-
-
-
-/**
- * Grid
- * ---------------------------------------------------------------------------
- */
-.grid {
-    font-size: 0;
-    text-align: justify;
-
-    &:after {
-        width: 100%;
-        display: inline-block;
-        content: "";
-    }
-
-    & > * {
-        font-size: medium;
-        display: inline-block;
-        vertical-align: top;
-    }
-}
-
-
-
-/**
- * Block context
- * ---------------------------------------------------------------------------
- */
-
-.block {
-    padding-top: $space;
-    padding-bottom: $space;
-}
-
-
-.block--deep {
-    padding-top: $space*2;
-}
-
-
-
-
-/**
- * ---------------------------------------------------------------------------
- * Brand colours
- * ---------------------------------------------------------------------------
- */
-
-.brand {
-    color: $theme-color;
-}
-
-.brand-alt {
-    color: #00a1ff;
-}
-
-
-/**
- * ---------------------------------------------------------------------------
- * Themes
- * ---------------------------------------------------------------------------
- */
-
-%fix-text {
-    -webkit-font-smoothing: antialiased;
-}
-
-.theme-primary {
-    @extend %fix-text;
-    background-color: $theme-color;
-    color: #fff;
-}
-
-.theme-night {
-    @extend %fix-text;
-    background-color: #222;
-    color: #fff;
-
-    a {
-        color: #fff;
-    }
-
-    .leading-rule,
-    .trailing-rule {
-        border-color: rgba(255,255,255,.2);
-    }
-
-    .btn-outline:hover {
-        color: #222;
-    }
-}
-
-
-.theme-light {
-    background-color: #ddd;
-}
-
-.theme-xlight {
-    background-color: #fafafa;
-}
-
-.theme-ui {
-    background-color: #46474B;
-
-}
-
-
-
-/**
- * ---------------------------------------------------------------------------
- * Utilities
- * ---------------------------------------------------------------------------
- */
-
-.u-center {
-    text-align: center;
-}
-
-.u-middle > * {
-    vertical-align: middle;
-}
-
-.u-strong {
-    font-weight: 600;
-}
-
-.u-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.u-hide {
-    display: none;
-}
-
-
-/**
- * 1. Ensures text doesn't wrap and break your layout
- * 2. Trigger overflow behavior
- * 3. Truncate the text
- */
-.u-truncate {
-    white-space: nowrap;            /* [1] */
-    overflow: hidden;               /* [2] */
-    text-overflow: ellipsis;        /* [3] */
-}
-
-
-@include small-only {
-    .u-hide-small {
-        display: none;
-    }
-
-    .u-center-small {
-        text-align: center;
-    }
-}
-
-
-@include medium {
-    .u-auto-medium {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .u-hide-medium {
-        display: none;
-    }
-
-    .u-center-medium {
-        text-align: center;
-    }
-}
-
-
-@include large {
-    .u-auto-large {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .u-hide-large {
-        display: none;
-    }
-    .u-center-large {
-        text-align: center;
-    }
-}
-
-
-
-
-
-
-/**
- * ---------------------------------------------------------------------------
- * Widths
- * ---------------------------------------------------------------------------
- *
- * Can be applied to anything.
- * Widths, like states and utilities, should come near the end of the
- * stylesheet to ensure they are obeyed.
- *
- * Try not to apply widths with a specificity of > 1. Don't do this:
- *
- * .something > li { width: 100% }
- *
- * If you *do* need to set a width, try BEMing it to keep specificity down:
- *
- * .something__item { width: 100% }
- *
- */
-
-.one-tenth                    { width: 10% }
-.one-quarter                  { width: 25% }
-.one-fifth                    { width: 20% }
-.one-third                    { width: 33.333333333% }
-.three-tenths                 { width: 30% }
-.two-fifths                   { width: 40% }
-.one-half                     { width: 50% }
-.three-fifths                 { width: 60% }
-.two-thirds                   { width: 66.666666666% }
-.seven-tenths                 { width: 70% }
-.three-quarters               { width: 75% }
-.four-fifths                  { width: 80% }
-.nine-tenths                  { width: 90% }
-.full                         { width: 100% }
-
-@include small {
-    .small-one-tenth          { width: 10% }
-    .small-one-quarter        { width: 25% }
-    .small-one-fifth          { width: 20% }
-    .small-one-third          { width: 33.333333333% }
-    .small-three-tenths       { width: 30% }
-    .small-two-fifths         { width: 40% }
-    .small-one-half           { width: 50% }
-    .small-three-fifths       { width: 60% }
-    .small-two-thirds         { width: 66.666666666% }
-    .small-seven-tenths       { width: 70% }
-    .small-three-quarters     { width: 75% }
-    .small-four-fifths        { width: 80% }
-    .small-nine-tenths        { width: 90% }
-    .small-full               { width: 100% }
-}
-
-@include medium {
-    .medium-one-tenth          { width: 10% }
-    .medium-one-quarter        { width: 25% }
-    .medium-one-fifth          { width: 20% }
-    .medium-one-third          { width: 33.333333333% }
-    .medium-three-tenths       { width: 30% }
-    .medium-two-fifths         { width: 40% }
-    .medium-one-half           { width: 50% }
-    .medium-three-fifths       { width: 60% }
-    .medium-two-thirds         { width: 66.666666666% }
-    .medium-seven-tenths       { width: 70% }
-    .medium-three-quarters     { width: 75% }
-    .medium-four-fifths        { width: 80% }
-    .medium-nine-tenths        { width: 90% }
-    .medium-full               { width: 100% }
-}
-
-@include large {
-    .large-one-tenth          { width: 10% }
-    .large-one-quarter        { width: 25% }
-    .large-one-fifth          { width: 20% }
-    .large-one-third          { width: 33.333333333% }
-    .large-three-tenths       { width: 30% }
-    .large-two-fifths         { width: 40% }
-    .large-one-half           { width: 50% }
-    .large-three-fifths       { width: 60% }
-    .large-two-thirds         { width: 66.666666666% }
-    .large-seven-tenths       { width: 70% }
-    .large-three-quarters     { width: 75% }
-    .large-four-fifths        { width: 80% }
-    .large-nine-tenths        { width: 90% }
-    .large-full               { width: 100% }
-}
-
-
-@include xlarge {
-    .xlarge-one-tenth          { width: 10% }
-    .xlarge-one-quarter        { width: 25% }
-    .xlarge-one-fifth          { width: 20% }
-    .xlarge-one-third          { width: 33.333333333% }
-    .xlarge-three-tenths       { width: 30% }
-    .xlarge-two-fifths         { width: 40% }
-    .xlarge-one-half           { width: 50% }
-    .xlarge-three-fifths       { width: 60% }
-    .xlarge-two-thirds         { width: 66.666666666% }
-    .xlarge-seven-tenths       { width: 70% }
-    .xlarge-three-quarters     { width: 75% }
-    .xlarge-four-fifths        { width: 80% }
-    .xlarge-nine-tenths        { width: 90% }
-    .xlarge-full               { width: 100% }
-}
-
-
-
-/**
- * ---------------------------------------------------------------------------
- * States
- * ---------------------------------------------------------------------------
- *
- * Apply states last.
- *
- */
-
-
-/**
- * Prevent all user interaction with the element
- */
-
-.is-disabled {
-    pointer-events: none;
-    cursor: default;
-    opacity: .5;
-}
-
-
-/**
- * Shows errors, especially in forms.
- *
- * 1. Assume error class can be applied to an input, containing div or label.
- * 2. Give links inside an errored component a clickable appearance.
- * 3. Reset form field border-color on focus.
- */
-
-.is-error {
-    color: red;
-    border-color: red;                      /* [1] */
-
-    a {
-        color: red;
-        text-decoration: underline;         /* [2] */
-    }
-
-    .field {
-        border-color: red;
-        &:focus {
-            border-color: $theme-color;     /* [3] */
+//responsive helpers 
+@include medium() {
+    .append--q-medium {
+        &:after{
+            content: attr(data-append-medium);
+            display: inline-block;
         }
     }
 }
 
-
-.is-hidden {
-    display: none;
+@include small-down() {
+    .append--q-small {
+        &:after{
+            content: attr(data-append-small);
+            display: inline-block;
+        }
+    }
 }
 
+.visible { visibility: visible !important; }
+.hidden { visibility: hidden !important; }
 
+
+.hide { display: none; }
+.show { display: block; }
+
+
+.hide-small {
+    @include small-down() {
+        & {
+            display:none;
+        }
+    }
+}
+
+.hide-medium {
+    @include medium() {
+        & {
+            display:none;
+        }
+    }
+}
