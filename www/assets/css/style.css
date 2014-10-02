@@ -653,7 +653,7 @@ fieldset {
   width: 20%; }
 
 .one-third {
-  width: 33.33333%; }
+  width: 33.333333333%; }
 
 .three-tenths {
   width: 30%; }
@@ -668,7 +668,7 @@ fieldset {
   width: 60%; }
 
 .two-thirds {
-  width: 66.66667%; }
+  width: 66.666666666%; }
 
 .seven-tenths {
   width: 70%; }
@@ -693,7 +693,7 @@ fieldset {
   .small-one-fifth {
     width: 20%; }
   .small-one-third {
-    width: 33.33333%; }
+    width: 33.333333333%; }
   .small-three-tenths {
     width: 30%; }
   .small-two-fifths {
@@ -703,7 +703,7 @@ fieldset {
   .small-three-fifths {
     width: 60%; }
   .small-two-thirds {
-    width: 66.66667%; }
+    width: 66.666666666%; }
   .small-seven-tenths {
     width: 70%; }
   .small-three-quarters {
@@ -723,7 +723,7 @@ fieldset {
   .medium-one-fifth {
     width: 20%; }
   .medium-one-third {
-    width: 33.33333%; }
+    width: 33.333333333%; }
   .medium-three-tenths {
     width: 30%; }
   .medium-two-fifths {
@@ -733,7 +733,7 @@ fieldset {
   .medium-three-fifths {
     width: 60%; }
   .medium-two-thirds {
-    width: 66.66667%; }
+    width: 66.666666666%; }
   .medium-seven-tenths {
     width: 70%; }
   .medium-three-quarters {
@@ -753,7 +753,7 @@ fieldset {
   .large-one-fifth {
     width: 20%; }
   .large-one-third {
-    width: 33.33333%; }
+    width: 33.333333333%; }
   .large-three-tenths {
     width: 30%; }
   .large-two-fifths {
@@ -763,7 +763,7 @@ fieldset {
   .large-three-fifths {
     width: 60%; }
   .large-two-thirds {
-    width: 66.66667%; }
+    width: 66.666666666%; }
   .large-seven-tenths {
     width: 70%; }
   .large-three-quarters {
@@ -783,7 +783,7 @@ fieldset {
   .xlarge-one-fifth {
     width: 20%; }
   .xlarge-one-third {
-    width: 33.33333%; }
+    width: 33.333333333%; }
   .xlarge-three-tenths {
     width: 30%; }
   .xlarge-two-fifths {
@@ -793,7 +793,7 @@ fieldset {
   .xlarge-three-fifths {
     width: 60%; }
   .xlarge-two-thirds {
-    width: 66.66667%; }
+    width: 66.666666666%; }
   .xlarge-seven-tenths {
     width: 70%; }
   .xlarge-three-quarters {

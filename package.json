@@ -1,26 +1,16 @@
 {
-  "name": "starter-kit",
+  "name": "starterkit",
   "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "grunt": "~0.4.1",
-    "grunt-check-dependencies": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-imagemin": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-sass": "~0.13.1",
-    "grunt-browserify": "^2.0.3",
-    "grunt-contrib-watch": "*",
-    "grunt-grunticon-pigment": "*"
-  },
-  "devDependenciesOff": {
-    "grunt-subgrunt-io": "*",
-    "grunt-bower-concat": "*"
-  },
+  "author": "Springload",
+  "description":"starterkit for projects",
   "devDependencies": {
-    "grunt-uncss": "^0.3.4",
-    "grunt-contrib-cssmin": "^0.7.0"
+    "grunt": "~0.4.4",
+    "grunt-check-dependencies": "*",
+    "grunt-sass": "0.14.0",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-grunticon-pigment": "*",
+    "grunt-autoprefixer": "^1.0.0"
   }
 }
