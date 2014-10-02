@@ -834,7 +834,7 @@ fieldset {
 .is-disabled {
   pointer-events: none;
   cursor: default;
-  opacity: 0.5; }
+  opacity: 0.7; }
 
 /**
  * Shows errors, especially in forms.
