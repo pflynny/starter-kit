@@ -1,26 +1,25 @@
 // Theme colours
-$theme-color: #014d8c;
-$space: 2em;
-$r-small: .25em;
-$r-tiny: .25em;
-$color-font-light: #888;
+// $theme-color: #014d8c;
+// $space: 2em;
+// $r-small: .25em;
+// $r-tiny: .25em;
+// $color-font-light: #888;
 
-@import "mixins";
 
-* {
-    box-sizing: border-box;
-}
+// * {
+//     box-sizing: border-box;
+// }
 
-html {
-    background: #fff;
-}
+// html {
+//     background: #fff;
+// }
 
-body {
-    margin: 0;
-    font-family: "source sans pro", helvetica, sans-serif;
-    line-height: 1.5;
-    color: #333;
-}
+// body {
+//     margin: 0;
+//     font-family: "source sans pro", helvetica, sans-serif;
+//     line-height: 1.5;
+//     color: #333;
+// }
 
 
 /**
@@ -29,107 +28,107 @@ body {
  * ----------------------------------------------------------------------------
  */
 
-h1 {
-    font-size: 48px;
-    font-size: 3rem;
-    font-weight: 300;
-    margin-top: 0;
-    margin-bottom: $space/2;
-    line-height: 1.4;
-}
+// h1 {
+//     font-size: 48px;
+//     font-size: 3rem;
+//     font-weight: 300;
+//     margin-top: 0;
+//     margin-bottom: $space/2;
+//     line-height: 1.4;
+// }
 
 
-h2 {
-    font-size: 36px;
-    font-size: 2.25rem;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: $space/2;
-}
+// h2 {
+//     font-size: 36px;
+//     font-size: 2.25rem;
+//     font-weight: 400;
+//     margin-top: 0;
+//     margin-bottom: $space/2;
+// }
 
 
-h3 {
-    font-size: 24px;
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-top: 0;
-    margin-bottom: $space/4;
-}
+// h3 {
+//     font-size: 24px;
+//     font-size: 1.5rem;
+//     font-weight: 400;
+//     margin-top: 0;
+//     margin-bottom: $space/4;
+// }
 
-h4 {
-    margin-bottom: $space/4;
-}
+// h4 {
+//     margin-bottom: $space/4;
+// }
 
-h4, p, dl, table, ul, ol {
-    margin-top: 0;
-    font-size: 18px;
-    font-size: 1.125rem;
-}
-
-
-h5 {
-    margin-top: 0;
-    font-size: 16px;
-    font-size: 1rem;
-    margin-bottom: $space/4;
-}
+// h4, p, dl, table, ul, ol {
+//     margin-top: 0;
+//     font-size: 18px;
+//     font-size: 1.125rem;
+// }
 
 
-h6 {
-    margin-top: 0;
-    font-size: 14px;
-    font-size: .875rem;
-    margin-bottom: $space/2;
-}
+// h5 {
+//     margin-top: 0;
+//     font-size: 16px;
+//     font-size: 1rem;
+//     margin-bottom: $space/4;
+// }
 
 
-p {
-    margin-top: 0;
-    margin-bottom: 24px;
-    margin-bottom: 1.5rem;
-}
+// h6 {
+//     margin-top: 0;
+//     font-size: 14px;
+//     font-size: .875rem;
+//     margin-bottom: $space/2;
+// }
 
 
-a {
-    text-decoration: none;
-    color: $theme-color;
-    &:hover {
-        color: lighten($theme-color, 10%);
-        border-color: lighten($theme-color, 20%);
-    }
-}
+// p {
+//     margin-top: 0;
+//     margin-bottom: 24px;
+//     margin-bottom: 1.5rem;
+// }
 
 
-blockquote {
-    margin-left: 0;
-    padding-left: 1.5em;
-    border-left: solid 3px #eee;
-
-    font-size: 20px;
-    font-size: 1.25rem;
-    color: $color-font-light;
-
-    // cite {
-    //     margin-top: 16px;
-    //     margin-top: 1rem;
-    //     display: block;
-    // }
-}
+// a {
+//     text-decoration: none;
+//     color: $theme-color;
+//     &:hover {
+//         color: lighten($theme-color, 10%);
+//         border-color: lighten($theme-color, 20%);
+//     }
+// }
 
 
-cite {
-    &:before {
-        content: "\2014\00a0";
-        font-weight: 300;
-    }
-    font-size: 14px;
-    font-size: .875rem;
-    color: #666;
-}
+// blockquote {
+//     margin-left: 0;
+//     padding-left: 1.5em;
+//     border-left: solid 3px #eee;
 
-small {
-    color: #888;
-}
+//     font-size: 20px;
+//     font-size: 1.25rem;
+//     color: $color-font-light;
+
+//     // cite {
+//     //     margin-top: 16px;
+//     //     margin-top: 1rem;
+//     //     display: block;
+//     // }
+// }
+
+
+// cite {
+//     &:before {
+//         content: "\2014\00a0";
+//         font-weight: 300;
+//     }
+//     font-size: 14px;
+//     font-size: .875rem;
+//     color: #666;
+// }
+
+// small {
+//     color: #888;
+// }
 
 
 table {
@@ -190,18 +189,18 @@ table {
  */
 
 
-dl, ul, ol {
-    margin-top: 0;
-    margin-bottom: $space/1.3333333333333;
-}
+// dl, ul, ol {
+//     margin-top: 0;
+//     margin-bottom: $space/1.3333333333333;
+// }
 
-ul,
-ol {
-    ul, ol {
-        margin-bottom: $space/4;
-        padding-top: $space/4;
-    }
-}
+// ul,
+// ol {
+//     ul, ol {
+//         margin-bottom: $space/4;
+//         padding-top: $space/4;
+//     }
+// }
 
 
 
@@ -211,37 +210,37 @@ ol {
  * Definition lists
  */
 
-dl {
+// dl {
 
-}
-    dt {
-        font-weight: 600;
-    }
+// }
+//     dt {
+//         font-weight: 600;
+//     }
 
-    dd {
-        margin-left: 0;
-        margin-bottom: $space/2;
-    }
+//     dd {
+//         margin-left: 0;
+//         margin-bottom: $space/2;
+//     }
 
 
-.dl--inline {
-    dd, dt {
-        display: inline;
-        margin: 0;
-    }
+// .dl--inline {
+//     dd, dt {
+//         display: inline;
+//         margin: 0;
+//     }
 
-    dt:after {
-        content: "\2014";
-        margin-left: $space/8;
-        color: #999;
-        font-weight: 300;
-    }
+//     dt:after {
+//         content: "\2014";
+//         margin-left: $space/8;
+//         color: #999;
+//         font-weight: 300;
+//     }
 
-    // dd:after {
-    //     content: '\A';
-    //     white-space: pre;
-    // }
-}
+//     // dd:after {
+//     //     content: '\A';
+//     //     white-space: pre;
+//     // }
+// }
 
 
 
@@ -289,27 +288,27 @@ dl {
  * ----------------------------------------------------------------------------
  */
 
-.default {
-    font-size: medium;
-}
+// .default {
+//     font-size: medium;
+// }
 
-.intro {
-    font-size: 20px;
-    font-size: 1.25rem;
-    // margin-bottom: 1em;
-    line-height: 1.4;
-}
+// .intro {
+//     font-size: 20px;
+//     font-size: 1.25rem;
+//     // margin-bottom: 1em;
+//     line-height: 1.4;
+// }
 
-.para {
-    font-size: 18px;
-    font-size: 1.125rem;
-    margin-bottom: 1.5em;
-}
+// .para {
+//     font-size: 18px;
+//     font-size: 1.125rem;
+//     margin-bottom: 1.5em;
+// }
 
-.small {
-    font-size: 14px;
-    font-size: .875rem;
-}
+// .small {
+//     font-size: 14px;
+//     font-size: .875rem;
+// }
 
 
 /**
@@ -336,173 +335,173 @@ dl {
 
 
 
-/**
- * ---------------------------------------------------------------------------
- * Buttons
- * ---------------------------------------------------------------------------
- *
- * Can be applied to any element
- * Will become an inline-block
- *
- *
- * Combine with other modifiers for the styling, eg:
- *
- *      <span class="btn btn-primary"></span>
- *
- *
- * 1. Buttons shouldn't wordwrap.
- * 2. Deal with styling for <button> element.
- *
- *
- * Note:
- *
- * Applying button classes to an <input type="submit"> element can be
- * unpredictable (especially in Firefox). Use a <button type="submit"></button>
- * instead to avoid weird line-height issues.
- *
- */
+// /**
+//  * ---------------------------------------------------------------------------
+//  * Buttons
+//  * ---------------------------------------------------------------------------
+//  *
+//  * Can be applied to any element
+//  * Will become an inline-block
+//  *
+//  *
+//  * Combine with other modifiers for the styling, eg:
+//  *
+//  *      <span class="btn btn-primary"></span>
+//  *
+//  *
+//  * 1. Buttons shouldn't wordwrap.
+//  * 2. Deal with styling for <button> element.
+//  *
+//  *
+//  * Note:
+//  *
+//  * Applying button classes to an <input type="submit"> element can be
+//  * unpredictable (especially in Firefox). Use a <button type="submit"></button>
+//  * instead to avoid weird line-height issues.
+//  *
+//  */
 
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: 2.5;
-    white-space: nowrap;            /* [1] */
-    -webkit-appearance: none;       /* [2] */
-       -moz-appearance: none;
-        -ms-appearance: none;
-         -o-appearance: none;
-            appearance: none;
-    border: none;
-    padding-left: $space/2;
-    padding-right: $space/2;
-    border-radius: $r-small;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0;
+// .btn {
+//     display: inline-block;
+//     text-decoration: none;
+//     font-family: inherit;
+//     font-size: inherit;
+//     line-height: 2.5;
+//     white-space: nowrap;            /* [1] */
+//     -webkit-appearance: none;       /* [2] */
+//        -moz-appearance: none;
+//         -ms-appearance: none;
+//          -o-appearance: none;
+//             appearance: none;
+//     border: none;
+//     padding-left: $space/2;
+//     padding-right: $space/2;
+//     border-radius: $r-small;
+//     padding-top: 0;
+//     padding-bottom: 0;
+//     margin: 0;
 
-    &:hover {
-        color: inherit;
-    }
-}
-
-
-
-
-/**
- * Button modifiers
- * ---------------------------------------------------------------------------
- */
-
-.btn--small {
-    padding-left: $space/4;
-    padding-right: $space/4;
-    line-height: 2;
-    border-radius: $r-tiny;
-}
-
-
-.btn--large {
-    line-height: 3;
-    padding-left: $space;
-    padding-right: $space;
-
-}
-
-.btn--block {
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-
-
-.btn--circle {
-    line-height: 1.75;
-    padding-left: .75em;
-    padding-right: .75em;
-}
+//     &:hover {
+//         color: inherit;
+//     }
+// }
 
 
 
-/**
- * Button themes
- * ---------------------------------------------------------------------------
- */
 
-.btn-primary {
-    background-color: $theme-color;
-    color: #fff;
-    &:hover {
-        background-color: darken($theme-color, 10%);
-        color: #fff;
-    }
-}
+// /**
+//  * Button modifiers
+//  * ---------------------------------------------------------------------------
+//  */
 
-
-.btn-secondary {
-    background-color: #999;
-    color: #fff;
-    &:hover {
-        background-color: #666;
-        color: #fff;
-    }
-}
-
-.btn-tertiary {
-    border: solid 1px rgba(0,0,0,0.25);
-    color: #666;
-    &:hover {
-        color: #333;
-        border-color: rgba(0,0,0,0.4);
-
-    }
-}
+// .btn--small {
+//     padding-left: $space/4;
+//     padding-right: $space/4;
+//     line-height: 2;
+//     border-radius: $r-tiny;
+// }
 
 
-.btn-outline {
-    border: solid 1px rgba(255,255,255,0.5);
-    color: #fff;
-    &:hover {
-        color: $theme-color;
-        background: #fff;
-        border-color: #fff;
-    }
-}
+// .btn--large {
+//     line-height: 3;
+//     padding-left: $space;
+//     padding-right: $space;
+
+// }
+
+// .btn--block {
+//     display: block;
+//     width: 100%;
+//     text-align: center;
+// }
+
+
+// .btn--circle {
+//     line-height: 1.75;
+//     padding-left: .75em;
+//     padding-right: .75em;
+// }
 
 
 
-/**
- * Apply the active state to buttons last to ensure color is respected.
- */
-.btn:active {
-    background-color: #333;
-    color: #fff;
-}
+// /**
+//  * Button themes
+//  * ---------------------------------------------------------------------------
+//  */
+
+// .btn-primary {
+//     background-color: $theme-color;
+//     color: #fff;
+//     &:hover {
+//         background-color: darken($theme-color, 10%);
+//         color: #fff;
+//     }
+// }
 
 
-/**
- * Button Groups
- * ---------------------------------------------------------------------------
- */
+// .btn-secondary {
+//     background-color: #999;
+//     color: #fff;
+//     &:hover {
+//         background-color: #666;
+//         color: #fff;
+//     }
+// }
+
+// .btn-tertiary {
+//     border: solid 1px rgba(0,0,0,0.25);
+//     color: #666;
+//     &:hover {
+//         color: #333;
+//         border-color: rgba(0,0,0,0.4);
+
+//     }
+// }
 
 
-.btn-group {
-    @include small-only {
-        & > .btn {
-            margin-bottom: $space/2;
-        }
-    }
-    @include medium {
-        & > .btn {
-            margin-right: $space/4;
+// .btn-outline {
+//     border: solid 1px rgba(255,255,255,0.5);
+//     color: #fff;
+//     &:hover {
+//         color: $theme-color;
+//         background: #fff;
+//         border-color: #fff;
+//     }
+// }
 
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-    }
-}
+
+
+// /**
+//  * Apply the active state to buttons last to ensure color is respected.
+//  */
+// .btn:active {
+//     background-color: #333;
+//     color: #fff;
+// }
+
+//to specifc steal this when you need it 
+// /**
+//  * Button Groups
+//  * ---------------------------------------------------------------------------
+//  */
+
+
+// .btn-group {
+//     @include small-only {
+//         & > .btn {
+//             margin-bottom: $space/2;
+//         }
+//     }
+//     @include medium {
+//         & > .btn {
+//             margin-right: $space/4;
+
+//             &:last-child {
+//                 margin-right: 0;
+//             }
+//         }
+//     }
+// }
 
 
 
@@ -513,168 +512,168 @@ dl {
  */
 
 
-
+//component better to bring it across than add it to the base
 /**
  * Extends `.nav {}`
  *
  * Tabbing is achieved through a selected/deselected bottom border. Add/remove here.
  */
 
-.tabs {
-    padding-bottom: .5em;
-}
+// .tabs {
+//     padding-bottom: .5em;
+// }
 
-    .tab {
-        padding-bottom: .25em;
-        color: $color-font-light;
-        border-bottom: solid 2px #eee;
-    }
-
-
-    .tab--active {
-        color: #222;
-        border-bottom-color: #aaa;
-    }
+//     .tab {
+//         padding-bottom: .25em;
+//         color: $color-font-light;
+//         border-bottom: solid 2px #eee;
+//     }
 
 
-
-
-
-/**
- * Avatars
- * ---------------------------------------------------------------------------
- */
-
-.circle, .avatar, .btn--circle {
-    border-radius: 50em;
-    display: inline-block;
-    overflow: hidden;
-}
-
-
-
-.circle {
-    width: 100%;
-    padding-bottom: 100%;
-    height: 0;
-}
-
-
-.avatar {
-
-    background-color: #ddd;
-
-    min-width: 2em;
-    min-height: 2em;
-
-    & > img {
-        display: block;
-        width: 100%;
-    }
-}
-
-
-
-.team {
-    display: inline-block;
-    margin-right: $space/2;
-    margin-bottom: $space/4;
-
-    img {
-        transition: transform linear .1s;
-        -webkit-backface-visibility: hidden;
-        transform: scale(1);
-    }
-
-    &:hover {
-        img {
-            transform: scale(1.03);
-        }
-    }
-}
-
-
-    .team__image,
-    .team__name {
-        text-align: left;
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    .team__image {
-        width: 4em;
-        height: 4em;
-        margin-right: .75em;
-        overflow: hidden;
-        transform: scale(1);
-    }
-
-
-    .team__role {
-        color: $color-font-light;
-    }
+//     .tab--active {
+//         color: #222;
+//         border-bottom-color: #aaa;
+//     }
 
 
 
 
+//component better to bring it across than add it to the base
+// /**
+//  * Avatars
+//  * ---------------------------------------------------------------------------
+//  */
+
+// .circle, .avatar, .btn--circle {
+//     border-radius: 50em;
+//     display: inline-block;
+//     overflow: hidden;
+// }
 
 
-/**
- * Media blocks
- * ---------------------------------------------------------------------------
- */
 
-.media {
-    overflow: hidden;
-    margin-bottom: 32px;
-    margin-bottom: 2rem;
-}
-
-.media--squishy {
-    img {
-        width: 100%;
-    }
-}
+// .circle {
+//     width: 100%;
+//     padding-bottom: 100%;
+//     height: 0;
+// }
 
 
-    .media__image {
-        float: left;
-        margin-right: $space;
+// .avatar {
 
-        > img {
-            display: block;
+//     background-color: #ddd;
 
-        }
-    }
+//     min-width: 2em;
+//     min-height: 2em;
 
-    .media__body {
-            }
+//     & > img {
+//         display: block;
+//         width: 100%;
+//     }
+// }
 
 
+//component better to bring it across than add it to the base
+// .team {
+//     display: inline-block;
+//     margin-right: $space/2;
+//     margin-bottom: $space/4;
+
+//     img {
+//         transition: transform linear .1s;
+//         -webkit-backface-visibility: hidden;
+//         transform: scale(1);
+//     }
+
+//     &:hover {
+//         img {
+//             transform: scale(1.03);
+//         }
+//     }
+// }
+
+
+//     .team__image,
+//     .team__name {
+//         text-align: left;
+//         display: inline-block;
+//         vertical-align: middle;
+//     }
+
+//     .team__image {
+//         width: 4em;
+//         height: 4em;
+//         margin-right: .75em;
+//         overflow: hidden;
+//         transform: scale(1);
+//     }
+
+
+    // .team__role {
+    //     color: $color-font-light;
+    // }
+
+
+
+
+
+
+// /**
+//  * Media blocks
+//  * ---------------------------------------------------------------------------
+//  */
+
+// .media {
+//     overflow: hidden;
+//     margin-bottom: 32px;
+//     margin-bottom: 2rem;
+// }
+
+// .media--squishy {
+//     img {
+//         width: 100%;
+//     }
+// }
+
+
+//     .media__image {
+//         float: left;
+//         margin-right: $space;
+
+//         > img {
+//             display: block;
+
+//         }
+//     }
+
+//     .media__body {
+//     }
+
+//component better to bring it across than add it to the base
 /**
  * Inset panels/cards
  * ---------------------------------------------------------------------------
  */
 
-.card {
-    border-radius: $r-small;
-    padding-top: 1.25em;
-    padding-bottom: 1.25em;
+// .card {
+//     border-radius: $r-small;
+//     padding-top: 1.25em;
+//     padding-bottom: 1.25em;
 
-    margin-bottom: $space;
-    border: solid 1px #e2e2e2;
-    background: #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+//     margin-bottom: $space;
+//     border: solid 1px #e2e2e2;
+//     background: #fff;
+//     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 
-    padding-left: $space/2;
-    padding-right: $space/2;
+//     padding-left: $space/2;
+//     padding-right: $space/2;
 
 
-    @include medium {
-        padding-left: $space;
-        padding-right: $space;
-    }
-}
+//     @include medium {
+//         padding-left: $space;
+//         padding-right: $space;
+//     }
+// }
 
 
 
