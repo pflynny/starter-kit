@@ -4,11 +4,11 @@ To build the CSS:
 
 ```bash
 $ npm install
-$ gulp sass
+$ grunt sass
 ```
 
 To build the icons:
 
 ```bash
-$ gulp icon
+$ grunt icon
 ```

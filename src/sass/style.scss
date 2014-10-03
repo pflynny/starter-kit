@@ -147,3 +147,402 @@ img { border: 0;}
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+
+.label {
+    margin-bottom: $space/2;
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+
+
+
+
+/**
+ * ---------------------------------------------------------------------------
+ * Structure
+ * ---------------------------------------------------------------------------
+ */
+
+
+.wrapper {
+    max-width: 800px;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.prose {
+    max-width: 36em;
+}
+
+.column {
+    padding-left: $space/2;
+    padding-right: $space/2;
+    text-align: left;
+
+    .grid {
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+}
+
+
+
+/**
+ * Grid
+ * ---------------------------------------------------------------------------
+ */
+.grid {
+    font-size: 0;
+    text-align: justify;
+
+    &:after {
+        width: 100%;
+        display: inline-block;
+        content: "";
+    }
+
+    & > * {
+        font-size: medium;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+
+
+/**
+ * Block context
+ * ---------------------------------------------------------------------------
+ */
+
+.block {
+    padding-top: $space;
+    padding-bottom: $space;
+}
+
+
+.block--deep {
+    padding-top: $space*2;
+}
+
+
+
+
+/**
+ * ---------------------------------------------------------------------------
+ * Brand colours
+ * ---------------------------------------------------------------------------
+ */
+
+.brand {
+    color: $theme-color;
+}
+
+.brand-alt {
+    color: #00a1ff;
+}
+
+
+/**
+ * ---------------------------------------------------------------------------
+ * Themes
+ * ---------------------------------------------------------------------------
+ */
+
+%fix-text {
+    -webkit-font-smoothing: antialiased;
+}
+
+.theme-primary {
+    @extend %fix-text;
+    background-color: $theme-color;
+    color: #fff;
+}
+
+.theme-night {
+    @extend %fix-text;
+    background-color: #222;
+    color: #fff;
+
+    a {
+        color: #fff;
+    }
+
+    .leading-rule,
+    .trailing-rule {
+        border-color: rgba(255,255,255,.2);
+    }
+
+    .btn-outline:hover {
+        color: #222;
+    }
+}
+
+
+.theme-light {
+    background-color: #ddd;
+}
+
+.theme-xlight {
+    background-color: #fafafa;
+}
+
+.theme-ui {
+    background-color: #46474B;
+
+}
+
+
+
+/**
+ * ---------------------------------------------------------------------------
+ * Utilities
+ * ---------------------------------------------------------------------------
+ */
+
+.u-center {
+    text-align: center;
+}
+
+.u-middle > * {
+    vertical-align: middle;
+}
+
+.u-strong {
+    font-weight: 600;
+}
+
+.u-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.u-hide {
+    display: none;
+}
+
+
+/**
+ * 1. Ensures text doesn't wrap and break your layout
+ * 2. Trigger overflow behavior
+ * 3. Truncate the text
+ */
+.u-truncate {
+    white-space: nowrap;            /* [1] */
+    overflow: hidden;               /* [2] */
+    text-overflow: ellipsis;        /* [3] */
+}
+
+
+@include small-only {
+    .u-hide-small {
+        display: none;
+    }
+
+    .u-center-small {
+        text-align: center;
+    }
+}
+
+
+@include medium {
+    .u-auto-medium {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .u-hide-medium {
+        display: none;
+    }
+
+    .u-center-medium {
+        text-align: center;
+    }
+}
+
+
+@include large {
+    .u-auto-large {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .u-hide-large {
+        display: none;
+    }
+    .u-center-large {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+/**
+ * ---------------------------------------------------------------------------
+ * Widths
+ * ---------------------------------------------------------------------------
+ *
+ * Can be applied to anything.
+ * Widths, like states and utilities, should come near the end of the
+ * stylesheet to ensure they are obeyed.
+ *
+ * Try not to apply widths with a specificity of > 1. Don't do this:
+ *
+ * .something > li { width: 100% }
+ *
+ * If you *do* need to set a width, try BEMing it to keep specificity down:
+ *
+ * .something__item { width: 100% }
+ *
+ */
+
+.one-tenth                    { width: 10% }
+.one-quarter                  { width: 25% }
+.one-fifth                    { width: 20% }
+.one-third                    { width: 33.333333333% }
+.three-tenths                 { width: 30% }
+.two-fifths                   { width: 40% }
+.one-half                     { width: 50% }
+.three-fifths                 { width: 60% }
+.two-thirds                   { width: 66.666666666% }
+.seven-tenths                 { width: 70% }
+.three-quarters               { width: 75% }
+.four-fifths                  { width: 80% }
+.nine-tenths                  { width: 90% }
+.full                         { width: 100% }
+
+@include small {
+    .small-one-tenth          { width: 10% }
+    .small-one-quarter        { width: 25% }
+    .small-one-fifth          { width: 20% }
+    .small-one-third          { width: 33.333333333% }
+    .small-three-tenths       { width: 30% }
+    .small-two-fifths         { width: 40% }
+    .small-one-half           { width: 50% }
+    .small-three-fifths       { width: 60% }
+    .small-two-thirds         { width: 66.666666666% }
+    .small-seven-tenths       { width: 70% }
+    .small-three-quarters     { width: 75% }
+    .small-four-fifths        { width: 80% }
+    .small-nine-tenths        { width: 90% }
+    .small-full               { width: 100% }
+}
+
+@include medium {
+    .medium-one-tenth          { width: 10% }
+    .medium-one-quarter        { width: 25% }
+    .medium-one-fifth          { width: 20% }
+    .medium-one-third          { width: 33.333333333% }
+    .medium-three-tenths       { width: 30% }
+    .medium-two-fifths         { width: 40% }
+    .medium-one-half           { width: 50% }
+    .medium-three-fifths       { width: 60% }
+    .medium-two-thirds         { width: 66.666666666% }
+    .medium-seven-tenths       { width: 70% }
+    .medium-three-quarters     { width: 75% }
+    .medium-four-fifths        { width: 80% }
+    .medium-nine-tenths        { width: 90% }
+    .medium-full               { width: 100% }
+}
+
+@include large {
+    .large-one-tenth          { width: 10% }
+    .large-one-quarter        { width: 25% }
+    .large-one-fifth          { width: 20% }
+    .large-one-third          { width: 33.333333333% }
+    .large-three-tenths       { width: 30% }
+    .large-two-fifths         { width: 40% }
+    .large-one-half           { width: 50% }
+    .large-three-fifths       { width: 60% }
+    .large-two-thirds         { width: 66.666666666% }
+    .large-seven-tenths       { width: 70% }
+    .large-three-quarters     { width: 75% }
+    .large-four-fifths        { width: 80% }
+    .large-nine-tenths        { width: 90% }
+    .large-full               { width: 100% }
+}
+
+
+@include xlarge {
+    .xlarge-one-tenth          { width: 10% }
+    .xlarge-one-quarter        { width: 25% }
+    .xlarge-one-fifth          { width: 20% }
+    .xlarge-one-third          { width: 33.333333333% }
+    .xlarge-three-tenths       { width: 30% }
+    .xlarge-two-fifths         { width: 40% }
+    .xlarge-one-half           { width: 50% }
+    .xlarge-three-fifths       { width: 60% }
+    .xlarge-two-thirds         { width: 66.666666666% }
+    .xlarge-seven-tenths       { width: 70% }
+    .xlarge-three-quarters     { width: 75% }
+    .xlarge-four-fifths        { width: 80% }
+    .xlarge-nine-tenths        { width: 90% }
+    .xlarge-full               { width: 100% }
+}
+
+
+
+/**
+ * ---------------------------------------------------------------------------
+ * States
+ * ---------------------------------------------------------------------------
+ *
+ * Apply states last.
+ *
+ */
+
+
+/**
+ * Prevent all user interaction with the element
+ */
+
+.is-disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: .7;
+}
+
+
+/**
+ * Shows errors, especially in forms.
+ *
+ * 1. Assume error class can be applied to an input, containing div or label.
+ * 2. Give links inside an errored component a clickable appearance.
+ * 3. Reset form field border-color on focus.
+ */
+
+.is-error {
+    color: red;
+    border-color: red;                      /* [1] */
+
+    a {
+        color: red;
+        text-decoration: underline;         /* [2] */
+    }
+
+    .field {
+        border-color: red;
+        &:focus {
+            border-color: $theme-color;     /* [3] */
+        }
+    }
+}
+
+
+.is-hidden {
+    display: none;
+}
+
+
+>>>>>>> 35813702142378fab4bab63d1162b9e050092687
