@@ -226,7 +226,7 @@ dl dt {
 }
 
 dd {
-    @extend %bt--primary;  
+
     @extend %mt-0;
     @extend %ml-0;
     @extend %pt-s;
@@ -236,7 +236,7 @@ dd {
 
  @include small-down() {
      dt {
-        border-top: 1px solid $primary-border-color;
+  
         float:none!important;
      }
     dd {
