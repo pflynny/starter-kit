@@ -217,53 +217,39 @@ hr {
 // Definition lists
 // ----------------------------------------------------------------------------
 
-dl dt {
-    @extend %pt-s;
-    @extend %pr-s;
-    @extend %pb-s;
-    float:left;
-    font-weight: bold;
+dl {
+
 }
+    dt {
+        font-weight: 600;
+    }
 
-dd {
-
-    @extend %mt-0;
-    @extend %ml-0;
-    @extend %pt-s;
-    @extend %pb-s;
-    text-align:right;
-}
-
- @include small-down() {
-     dt {
-  
-        float:none!important;
-     }
     dd {
-         text-align:left!important;
-     }
- }
+        margin-left: 0;
+        @extend %mb-s;
+    }
 
 
 // ----------------------------------------------------------------------------
 // blockquote
 // ----------------------------------------------------------------------------
 blockquote {
-    margin:0;
-    padding:0;
-    @include rem(padding-left, $space-xxl);
-    border-left:0 solid $ultra-light-grey;
-    @include rem(border-width, $space-xs);
-}
-//reset stuff
-blockquote {
-    quotes:none;
+    @extend %pt-l;
+    @extend %font-size-l;
+    margin-left: 0;
+    border-left: solid 3px #eee;
+    color: $light-grey;
 }
 
-blockquote:before,
-blockquote:after {
-    content:none;
-}
+
+    cite {
+        &:before {
+            content: "\2014\00a0";
+            font-weight: $font-light;
+        }
+        @extend %font-size-s;
+        color: #666;
+    }
 
 
 

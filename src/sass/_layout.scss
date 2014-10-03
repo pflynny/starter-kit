@@ -8,6 +8,31 @@
 // Grid
 // ----------------------------------------------------------------------------
 
+.grid {
+    font-size: 0;
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    
+    @include medium {
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+
+    & > * {
+        @extend %inline-block;
+        font-size: medium;
+    }
+
+    & > .grid {
+        @extend %inline-block;
+        font-size: 0;  
+    }
+}
+
+    .grid > *,
+    .grid__item {
+        vertical-align: top;
+    }
 
 // grid modififers
 // --------------------
@@ -21,6 +46,56 @@
 .grid--bottom {
     > * { vertical-align: bottom; }
 }
+
+// ----------------------------------------------------------------------------
+// column info
+// ----------------------------------------------------------------------------
+
+%column-padding {
+
+    padding-left: .5rem;
+    padding-right: .5rem;
+
+    @include medium {
+        & {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}
+
+.col {
+    @extend %column-padding;
+    width:100%;
+}
+
+.gutters { @extend %column-padding;}
+
+.col--no-gutters { width:100%; }
+
+// ----------------------------------------------------------------------------
+// main section's vertical spacing
+// ----------------------------------------------------------------------------
+
+.section {
+    @extend %pt-xxxxl;
+    @extend %pb-xxxxl;
+    @extend %pt-xxxl--small-down;
+    @extend %pb-xxxl--small-down;
+}
+
+// ----------------------------------------------------------------------------
+// main sections vertical spacing 
+// ----------------------------------------------------------------------------
+
+.layout {
+    box-sizing:border-box;
+    @extend %pl-xxxxl;
+    @extend %pr-xxxxl;
+    @extend %pl-xxxl--small-down;
+    @extend %pr-xxxl--small-down;
+}
+
 // ----------------------------------------------------------------------------
 // widths
 // ----------------------------------------------------------------------------
@@ -69,42 +144,30 @@ $cols-large: 10;
 
 @for $i from 1 to $cols-large+1 {
     $width: #{ (((1/$cols-large) * $i) * 100)  + "%"};
-    %small-#{$i} {
-      
-        width: $width;
-        
-    }
     .small-#{$i} {
-        @extend %small-#{$i};
+        width: $width;
     }
 }
 
 @for $i from 1 to $cols-large+1 {
     $width: #{ (((1/$cols-large) * $i) * 100)  + "%"};
-    %medium-#{$i} {
+    .medium-#{$i} {
         @include medium() {
             & {
                 width: $width;
             }
         }
     }
-    .medium-#{$i} {
-        @extend %medium-#{$i};
-    }
 }
 
 
 @for $i from 1 to $cols-large+1 {
     $width: #{ (((1/$cols-large) * $i) * 100)  + "%"};
-    %large-#{$i} {
+    .large-#{$i} {
         @include large() {
             & {
                 width: $width;
             }
         }
-    }
-
-    .large-#{$i} {
-        @extend %large-#{$i};
     }
 }

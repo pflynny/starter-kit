@@ -1109,3 +1109,272 @@ textarea {
 
 
 
+
+
+//what do we do with these do we add them somewhere ?
+/*------------------------------------*\
+    #Utilities
+\*------------------------------------*/
+
+// -----------------------------------------------------------------------------
+// Inline block and block
+// -----------------------------------------------------------------------------
+// zoom fix for IE6/7 so they correctly display inline-block elements
+// (forces hasLayout)
+
+%inline-block {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.inline-block { @extend %inline-block; }
+
+// -----------------------------------------------------------------------------
+// First child helpers  
+// -----------------------------------------------------------------------------
+
+//Remove top margin
+%first-child-no-top:first-child {
+    margin-top: 0;
+}
+
+.first-child-no-top {
+    @extend %first-child-no-top;
+}
+
+//Remove top border
+%first-child-no-top-border:first-child {
+    border-top: none;
+}
+
+.first-child-no-top-border {
+   @extend %first-child-no-top-border;
+}
+
+// -----------------------------------------------------------------------------
+// Fix webkit bug
+// -----------------------------------------------------------------------------
+
+%font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    .isWindowsChrome & {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+%fix-webkit-font-rendering {
+    @extend %font-smoothing;
+    text-rendering: optimizeLegibility;
+}
+
+%antialiased {
+    @extend %font-smoothing;
+}
+
+.antialiased {
+    @extend %antialiased;
+}
+
+
+// -----------------------------------------------------------------------------
+// Clearfix
+// -----------------------------------------------------------------------------
+
+%clearfix {
+    /**
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+    *zoom: 1;
+}
+
+%clearfix:before {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+%clearfix:after {
+    clear: both;
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix { @extend %clearfix; }
+
+
+
+// -----------------------------------------------------------------------------
+// Screen reader content -------------- This is borrowed from Bootstrap.
+// -----------------------------------------------------------------------------
+
+
+%sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.sr-only {  @extend %sr-only; }
+
+
+.font-bold-italic { 
+    @extend %font-italic; 
+    @extend %font-bold;
+}
+
+.font-light-italic { 
+    @extend %font-italic; 
+    @extend %font-light; 
+}
+
+
+
+%text--overflow {
+    @extend %inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+.text--overflow {
+    @extend %text--overflow;
+}
+
+
+
+// -----------------------------------------------------------------------------
+// Lists
+// -----------------------------------------------------------------------------
+
+%list--unstyled {
+    list-style: none;
+    padding-left: 0;
+
+    & > li {
+        list-style: none;
+        margin:0;
+    }
+}
+
+%list--inline {
+    @extend %clearfix;
+    @extend %list--unstyled;
+
+    & > li {
+        margin-top:0;
+        display: inline-block;
+        padding-left: 0;
+    }
+}
+
+%list--block {
+    @extend %list--unstyled;
+    > li {
+        display: block;
+    }
+}
+
+.list--block { @extend %list--block; }
+.list--inline { @extend %list--inline; }
+.list--unstyled { @extend %list--unstyled; }
+
+
+
+// -----------------------------------------------------------------------------
+// border helper classes
+// -----------------------------------------------------------------------------
+
+%border {
+    border-width:1px;
+    border-style:solid;
+}
+
+%bt--primary { border-top: 1px solid $primary-border-color; }
+
+%bb--primary { border-bottom: 1px solid $primary-border-color; }
+
+%bl--primary { border-left: 1px solid $primary-border-color; }
+
+%br--primary { border-right: 1px solid $primary-border-color; }
+
+.bt--primary { @extend %bt--primary; }
+.bb--primary { @extend %bb--primary; }
+.bl--primary { @extend %bl--primary; }
+.br--primary { @extend %br--primary; }
+
+
+// -----------------------------------------------------------------------------
+// Anchors
+// -----------------------------------------------------------------------------
+
+%cursor-on-hover {
+    &:hover {
+        cursor: pointer;
+    }
+}
+.cursor-on-hover {
+  @extend %cursor-on-hover;  
+}
+
+
+
+// A link without any text-decoration at all.
+%clean-link {
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+    text-decoration: none;
+}
+// A link with out any text decoration
+.clean-link {
+    @extend %clean-link;
+}
+
+
+
+// -----------------------------------------------------------------------------
+// radius helpers
+// -----------------------------------------------------------------------------
+
+%br-xxs { @include rem(border-radius, $space-xxs);}
+
+%br-bottom-xxs {
+    @include rem(border-bottom-left-radius, $space-xxs);
+    @include rem(border-bottom-right-radius, $space-xxs);
+}
+
+%br-top-xxs {
+    @include rem(border-top-left-radius, $space-xxs);
+    @include rem(border-top-right-radius, $space-xxs);
+}
+
+%br-left-xxs {
+    @include rem(border-top-left-radius, $space-xxs);
+    @include rem(border-bottom-left-radius, $space-xxs);
+}
+
+%br-right-xxs {
+    @include rem(border-top-right-radius, $space-xxs);
+    @include rem(border-bottom-right-radius, $space-xxs);
+}
+
+%br-top-right-xxs { @include rem(border-top-right-radius, $space-xxs);}
+
+%br-bottom-right-xxs { @include rem(border-bottom-right-radius, $space-xxs);}
+
+%br-top-left-xxs { @include rem(border-top-left-radius, $space-xxs); }
+
+%br-bottom-left-xxs { @include rem(border-bottom-left-radius, $space-xxs);}
+
+%round { border-radius: 50em; }
+
