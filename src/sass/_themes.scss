@@ -8,10 +8,10 @@ $primary-border-color: $primary-bg-color;
 $primary-font-color: $white;
 $primary-link-color: inherit;
 
-$seconday-bg-color: #FF6961;
-$seconday-border-color: $seconday-bg-color;
-$seconday-font-color: $white;
-$seconday-link-color: inherit;
+$secondary-bg-color: #FF6961;
+$secondary-border-color: $secondary-bg-color;
+$secondary-font-color: $white;
+$secondary-link-color: inherit;
 
 
 $theme-names:
@@ -24,7 +24,7 @@ $bg-color:
 
 $border-color:
   $primary-border-color,
-  $border-border-color;
+  $secondary-border-color;
 
 $font-color:
   $primary-font-color,
@@ -32,7 +32,7 @@ $font-color:
 
 $link-color:
   $primary-link-color,
-  $secondary-link-color;;
+  $secondary-link-color;
 
 @for $i from 1 through length($theme-names) {
 
