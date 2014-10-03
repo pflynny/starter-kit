@@ -9,29 +9,30 @@ $base-line-height: 1.5;
 // Specify some font sizes to get your project rolling. These are predominantly
 // used by _typography.scss
 
-$font-size-xxxxl: 64;       // big statistics figures and the like
-$font-size-xxxl: 48;        // h1
-$font-size-xxl: 32;         // h2
-$font-size-xl: 24;          // h3
-$font-size-l: 18;           // h4
-$font-size-m: 16;           // p, h5, h6
-$font-size-s: 14;           // small
-$font-size-xs: 12;          // x-small
+$font-size-xxxxl:       64;       // big statistics figures and the like
+$font-size-xxxl:        48;        // h1
+$font-size-xxl:         32;         // h2
+$font-size-xl:          24;          // h3
+$font-size-l:           18;           // h4
+$font-size-m:           16;           // p, h5, h6
+$font-size-s:           14;           // small
+$font-size-xs:          12;          // x-small
 
-$line-height-xxxxl: 88/64;  // big statistics figures and the like
-$line-height-xxxl: 56/48;   // h1
-$line-height-xxl: 40/32;    // h2
-$line-height-xl: 36/24;     // h3
-$line-height-l: 28/18;      // h4
-$line-height-m: 24/16;      // p, h5, h6
-$line-height-s: 20/14;      // small
-$line-height-xs: 16/12;     // x-small
+$line-height-xxxxl:     88/64;  // big statistics figures and the like
+$line-height-xxxl:      56/48;   // h1
+$line-height-xxl:       40/32;    // h2
+$line-height-xl:        36/24;     // h3
+$line-height-l:         28/18;      // h4
+$line-height-m:         24/16;      // p, h5, h6
+$line-height-s:         20/14;      // small
+$line-height-xs:        16/12;     // x-small
 
 
 //font-weights
-$font-light:300;
-$font-normal:400;
-$font-bold:600;
+$font-light:            300;
+$font-normal:           400;
+$font-bold:             600;
+
 // -----------------------------------------------------------------------------
 // Media queries
 // -----------------------------------------------------------------------------
@@ -43,9 +44,9 @@ $breakpoint-large:      60em;   // Desktop 960px
 $breakpoint-xlarge:     75em;   // Wide 1200px
 
 $breakpoint-x-small-max:  $breakpoint-small - 1 ;
-$breakpoint-small-max:  $breakpoint-medium - 1 ;
-$breakpoint-medium-max: $breakpoint-large - 1;
-$breakpoint-large-max: $breakpoint-xlarge - 1;
+$breakpoint-small-max:    $breakpoint-medium - 1 ;
+$breakpoint-medium-max:   $breakpoint-large - 1;
+$breakpoint-large-max:    $breakpoint-xlarge - 1;
 
 
 // Media shortcuts
@@ -104,15 +105,15 @@ $breakpoint-large-max: $breakpoint-xlarge - 1;
 $space: 16; //px
 
 $space-0: 0;
-$space-xxs: $space * .25;   //4px
-$space-xs: $space * .5;     //8px
-$space-s: $space * .75;     //12px
-$space-m: $space;           //16px
-$space-l: $space * 1.25;    //20px
-$space-xl: $space * 1.5;    //24px
-$space-xxl: $space * 1.75;  //28px
-$space-xxxl: $space * 2;    //32px
-$space-xxxxl: $space * 3;   //48px
+$space-xxs:     $space * .25;   //4px
+$space-xs:      $space * .5;     //8px
+$space-s:       $space * .75;     //12px
+$space-m:       $space;           //16px
+$space-l:       $space * 1.25;    //20px
+$space-xl:      $space * 1.5;    //24px
+$space-xxl:     $space * 1.75;  //28px
+$space-xxxl:    $space * 2;    //32px
+$space-xxxxl:   $space * 3;   //48px
 
 
 
@@ -120,15 +121,15 @@ $space-xxxxl: $space * 3;   //48px
 // Icon Colours
 // -----------------------------------------------------------------------------
 
-$icon-bg-black: 0;
-$icon-bg-white: 12.5%; // 100% / (no. colours-1)
-$icon-bg-blue: 25%;
-$icon-bg-dark-blue: 37.5%;
-$icon-bg-grey: 50%;
-$icon-bg-dark-grey: 62.5%;
-$icon-bg-green: 75%;
-$icon-bg-orange: 87.5%;
-$icon-bg-red: 100%;
+$icon-bg-black:         0;
+$icon-bg-white:         12.5%; // 100% / (no. colours-1)
+$icon-bg-blue:          25%;
+$icon-bg-dark-blue:     37.5%;
+$icon-bg-grey:          50%;
+$icon-bg-dark-grey:     62.5%;
+$icon-bg-green:         75%;
+$icon-bg-orange:        87.5%;
+$icon-bg-red:           100%;
 
 
 // -----------------------------------------------------------------------------
@@ -136,13 +137,13 @@ $icon-bg-red: 100%;
 // -----------------------------------------------------------------------------
 
 /* global colours */
-$black: #000;
-$white: #fff;
-$ultra-light-grey: #F2F4F7;
-$light-grey: #ddd;
-$mid-grey: #999;
-$dark-grey: #5e5c5c;
-$ultra-dark-grey: #444;
+$black:                 #000;
+$white:                 #fff;
+$ultra-light-grey:      #F2F4F7;
+$light-grey:            #ddd;
+$mid-grey:              #999;
+$dark-grey:             #5e5c5c;
+$ultra-dark-grey:       #444;
 
 
 /* base colours */
@@ -155,17 +156,17 @@ $color-focus: rgb(255, 92, 0);
 
 
 /* form colours */
-$error-red: #c44;
-$warning-red: #CA4142;
-$confirmation-green: #59B359;
-$color-orange: #FF8C19;
+$error-red:             #c44;
+$warning-red:           #CA4142;
+$confirmation-green:    #59B359;
+$color-orange:          #FF8C19;
 
-$form-input-color: #F2F2EB;
-$form-label-color: blue;
+$form-input-color:      #F2F2EB;
+$form-label-color:      blue;
 
 
 /* link colours */
-$base-link-color: #236FA6;
+$base-link-color:       #236FA6;
 $base-link-hover-color: darken($base-link-color, 15%);
 $base-link-visited-color: lighten($base-link-color, 5%); //#c3c;
 
