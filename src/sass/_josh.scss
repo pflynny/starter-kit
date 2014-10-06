@@ -163,13 +163,6 @@ table {
 }
 
 
-.is-hidden {
-    display: none;
-}
-
-
-
-
 
 //what do we do with these do we add them somewhere ?
 /*------------------------------------*\
@@ -363,41 +356,6 @@ table {
     @extend %clean-link;
 }
 
-
-
-// -----------------------------------------------------------------------------
-// radius helpers
-// -----------------------------------------------------------------------------
-
-%br-xxs { @include rem(border-radius, $space-xxs);}
-
-%br-bottom-xxs {
-    @include rem(border-bottom-left-radius, $space-xxs);
-    @include rem(border-bottom-right-radius, $space-xxs);
-}
-
-%br-top-xxs {
-    @include rem(border-top-left-radius, $space-xxs);
-    @include rem(border-top-right-radius, $space-xxs);
-}
-
-%br-left-xxs {
-    @include rem(border-top-left-radius, $space-xxs);
-    @include rem(border-bottom-left-radius, $space-xxs);
-}
-
-%br-right-xxs {
-    @include rem(border-top-right-radius, $space-xxs);
-    @include rem(border-bottom-right-radius, $space-xxs);
-}
-
-%br-top-right-xxs { @include rem(border-top-right-radius, $space-xxs);}
-
-%br-bottom-right-xxs { @include rem(border-bottom-right-radius, $space-xxs);}
-
-%br-top-left-xxs { @include rem(border-top-left-radius, $space-xxs); }
-
-%br-bottom-left-xxs { @include rem(border-bottom-left-radius, $space-xxs);}
 
 %round { border-radius: 50em; }
 
