@@ -12,7 +12,7 @@
     font-size: 0;
     margin-left: -.5rem;
     margin-right: -.5rem;
-    
+
     @include medium {
         margin-left: -1rem;
         margin-right: -1rem;
@@ -25,7 +25,7 @@
 
     & > .grid {
         @extend %inline-block;
-        font-size: 0;  
+        font-size: 0;
     }
 }
 
@@ -85,7 +85,7 @@
 }
 
 // ----------------------------------------------------------------------------
-// main sections vertical spacing 
+// main sections vertical spacing
 // ----------------------------------------------------------------------------
 
 .layout {
@@ -100,74 +100,77 @@
 // widths
 // ----------------------------------------------------------------------------
 
-
-.full-width { width:100% }
-.half { width: 50%; }
-.third { width: 33.3333333%; }
-.two-thirds { width: 66.666666%; }
-.quarter { width: 25%; }
+.one-tenth { width: 10%; }
+.two-tenths { width: 20%; }
+.three-tenths { width: 30%; }
+.four-tenths { width: 40%; }
+.five-tenths { width: 50%; }
+.six-tenths { width: 60%; }
+.seven-tenths { width: 70%; }
+.eight-tenths { width: 80%; }
+.nine-tenths { width: 90%; }
+.full { width: 100%; }
+.one-quarter { width: 25%; }
+.one-third { width: 33.33333%; }
+.two-thirds { width: 66.66667%; }
 .three-quarters { width: 75%; }
-.fifth { width: 20%; }
-
 
 @include small() {
-    .small-full-width { width: 100%; }
-    .small-half { width: 50%; }
-    .small-third { width: 33.3333333%; }
-    .small-two-thirds { width: 66.666666%; }
-    .small-quarter { width: 25%; }
+    .small-one-tenth { width: 10%; }
+    .small-two-tenths { width: 20%; }
+    .small-three-tenths { width: 30%; }
+    .small-four-tenths { width: 40%; }
+    .small-five-tenths { width: 50%; }
+    .small-six-tenths { width: 60%; }
+    .small-seven-tenths { width: 70%; }
+    .small-eight-tenths { width: 80%; }
+    .small-nine-tenths { width: 90%; }
+    .small-full { width: 100%; }
+    .small-one-quarter { width: 25%; }
+    .small-one-third { width: 33.33333%; }
+    .small-two-thirds { width: 66.66667%; }
     .small-three-quarters { width: 75%; }
 }
-
 @include medium() {
-    .medium-full-width { width: 100%; }
-    .medium-half { width: 50%; }
-    .medium-third { width: 33.3333333%; }
-    .medium-two-thirds { width: 66.666666%; }
-    .medium-quarter { width: 25%; }
+    .medium-one-tenth { width: 10%; }
+    .medium-two-tenths { width: 20%; }
+    .medium-three-tenths { width: 30%; }
+    .medium-four-tenths { width: 40%; }
+    .medium-five-tenths { width: 50%; }
+    .medium-six-tenths { width: 60%; }
+    .medium-seven-tenths { width: 70%; }
+    .medium-eight-tenths { width: 80%; }
+    .medium-nine-tenths { width: 90%; }
+    .medium-full { width: 100%; }
+    .medium-one-quarter { width: 25%; }
+    .medium-one-third { width: 33.33333%; }
+    .medium-two-thirds { width: 66.66667%; }
     .medium-three-quarters { width: 75%; }
-    .medium-fifth { width: 20%; }
 }
 
 @include large() {
-    .large-full-width { width: 100%; }
-    .large-half { width: 50%; }
-    .large-third { width: 33.3333333%; }
-    .large-two-thirds { width: 66.666666%; }
-    .large-quarter { width: 25%; }
+    .large-one-tenth { width: 10%; }
+    .large-two-tenths { width: 20%; }
+    .large-three-tenths { width: 30%; }
+    .large-four-tenths { width: 40%; }
+    .large-five-tenths { width: 50%; }
+    .large-six-tenths { width: 60%; }
+    .large-seven-tenths { width: 70%; }
+    .large-eight-tenths { width: 80%; }
+    .large-nine-tenths { width: 90%; }
+    .large-full { width: 100%; }
+    .large-one-quarter { width: 25%; }
+    .large-one-third { width: 33.33333%; }
+    .large-two-thirds { width: 66.66667%; }
     .large-three-quarters { width: 75%; }
-    .large-fifth { width: 20%; }
-}
-
-//10 column grid
-$cols-large: 10;
-
-@for $i from 1 to $cols-large+1 {
-    $width: #{ (((1/$cols-large) * $i) * 100)  + "%"};
-    .small-#{$i} {
-        width: $width;
-    }
-}
-
-@for $i from 1 to $cols-large+1 {
-    $width: #{ (((1/$cols-large) * $i) * 100)  + "%"};
-    .medium-#{$i} {
-        @include medium() {
-            & {
-                width: $width;
-            }
-        }
-    }
 }
 
 
-@for $i from 1 to $cols-large+1 {
-    $width: #{ (((1/$cols-large) * $i) * 100)  + "%"};
-    .large-#{$i} {
-        @include large() {
-            & {
-                width: $width;
-            }
-        }
-    }
-}
+
+
+
+
+
+
+
+
