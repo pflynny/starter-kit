@@ -186,6 +186,10 @@ img { border: 0;}
     margin-right:auto;
 }
 
+.auto {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .overflow-hidden { overflow: hidden; }
 
@@ -249,6 +253,11 @@ img { border: 0;}
         display: inline-block;
     }
 
+    .auto--small-down {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
 
 
@@ -265,6 +274,10 @@ img { border: 0;}
         content: attr(data-append-medium);
         display: inline-block;
     }
+    .auto--medium {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 }
 
@@ -280,6 +293,11 @@ img { border: 0;}
     .append--q-large:after {
         content: attr(data-append-medium);
         display: inline-block;
+    }
+
+    .auto--large {
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
