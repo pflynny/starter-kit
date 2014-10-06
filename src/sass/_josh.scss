@@ -122,9 +122,6 @@ table {
  * ---------------------------------------------------------------------------
  */
 
-%fix-text {
-    -webkit-font-smoothing: antialiased;
-}
 
 // .theme-primary {
 //     @extend %fix-text;
@@ -326,7 +323,7 @@ table {
 .inline-block { @extend %inline-block; }
 
 // -----------------------------------------------------------------------------
-// First child helpers  
+// First child helpers
 // -----------------------------------------------------------------------------
 
 //Remove top margin
@@ -373,30 +370,7 @@ table {
 }
 
 
-// -----------------------------------------------------------------------------
-// Clearfix
-// -----------------------------------------------------------------------------
 
-%clearfix {
-    /**
-     * For IE 6/7 only
-     * Include this rule to trigger hasLayout and contain floats.
-     */
-    *zoom: 1;
-}
-
-%clearfix:before {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-%clearfix:after {
-    clear: both;
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix { @extend %clearfix; }
 
 
 
@@ -419,14 +393,14 @@ table {
 .sr-only {  @extend %sr-only; }
 
 
-.font-bold-italic { 
-    @extend %font-italic; 
+.font-bold-italic {
+    @extend %font-italic;
     @extend %font-bold;
 }
 
-.font-light-italic { 
-    @extend %font-italic; 
-    @extend %font-light; 
+.font-light-italic {
+    @extend %font-italic;
+    @extend %font-light;
 }
 
 
@@ -516,7 +490,7 @@ table {
     }
 }
 .cursor-on-hover {
-  @extend %cursor-on-hover;  
+  @extend %cursor-on-hover;
 }
 
 

@@ -14,9 +14,9 @@
 *
 * Layout .............. Layout modifiers along with vertical and horizontal spacing.
 *
-* Icons ............... Icons 
+* Icons ............... Icons
 *
-* Themes .............. Themes 
+* Themes .............. Themes
 *
 */
 
@@ -44,6 +44,47 @@ body {
 
 // Remove border when inside `a` element in IE 8/9.
 img { border: 0;}
+
+
+%fix-text {
+    -webkit-font-smoothing: antialiased;
+}
+
+%clearfix {
+    /**
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+    *zoom: 1;
+}
+
+%clearfix:before {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+%clearfix:after {
+    clear: both;
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix { @extend %clearfix; }
+
+//Remove top margin
+%first-child-no-top:first-child {
+    margin-top: 0;
+}
+
+.first-child-no-top {
+    @extend %first-child-no-top;
+}
+
+//Remove top border
+%first-child-no-top-border:first-child {
+    border-top: none;
+}
+
 
 @import "spacing";
 @import "icons";
@@ -78,6 +119,17 @@ img { border: 0;}
 .text-center { text-align:center; }
 .text-left { text-align:left;}
 .text-right { text-align:right;}
+
+
+.text--overflow {
+    @extend %inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
+
+
 
 
 // -----------------------------------------------------------------------------
@@ -123,27 +175,27 @@ img { border: 0;}
     }
 
 
-.align--top { vertical-align: top; } 
-.align--middle > * { vertical-align: middle; } 
+.align--top { vertical-align: top; }
+.align--middle > * { vertical-align: middle; }
 //.align--middle { vertical-align: middle; }
-.align--baseline {vertical-align: baseline; } 
-.align--bottom { vertical-align: bottom; } 
+.align--baseline {vertical-align: baseline; }
+.align--bottom { vertical-align: bottom; }
 
-.center-element { 
+.center-element {
     margin-left:auto;
-    margin-right:auto; 
-} 
+    margin-right:auto;
+}
 
 
 .overflow-hidden { overflow: hidden; }
 
 .fixed--bottom {
-    position:fixed; 
+    position:fixed;
     bottom:0;
 }
 
 .fixed--top {
-    position:fixed; 
+    position:fixed;
     top:0;
 }
 
@@ -166,8 +218,20 @@ img { border: 0;}
 .hide { display: none; }
 .show { display: block; }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+
 // -----------------------------------------------------------------------------
-// utilities -- responsive helpers 
+// utilities -- responsive helpers
 // -----------------------------------------------------------------------------
 
 
@@ -180,7 +244,7 @@ img { border: 0;}
     .text-right--small-down { text-align: right; }
     .text-left--small-down { text-align: left; }
 
-    .append--q-small-down:after { 
+    .append--q-small-down:after {
         content: attr(data-append-small);
         display: inline-block;
     }
@@ -188,12 +252,11 @@ img { border: 0;}
 }
 
 
-
 @include medium {
-        
+
     .hide-medium { display:none; }
     .show--medium {  display:block; }
-    
+
     .text-center--medium { text-align: center; }
     .text-right--medium { text-align: right; }
     .text-left--medium { text-align: left; }
@@ -206,7 +269,7 @@ img { border: 0;}
 }
 
 @include large {
-        
+
     .hide-large { display:none; }
     .show--large {  display:block; }
 
@@ -214,13 +277,13 @@ img { border: 0;}
     .text-right--large { text-align: right; }
     .text-left--large { text-align: left; }
 
-    .append--q-large:after { 
+    .append--q-large:after {
         content: attr(data-append-medium);
         display: inline-block;
     }
 
 }
-    
+
 
 // -----------------------------------------------------------------------------
 // utilities -- States
@@ -241,4 +304,7 @@ img { border: 0;}
 
 .is-visible { visibility: visible ; }
 .is-hidden { visibility: hidden ; }
+
+
+
 
