@@ -55,13 +55,6 @@ table {
 
 
 
-
-
-
-
-
-
-
 /**
  * ----------------------------------------------------------------------------
  * Typography continued
@@ -132,46 +125,8 @@ table {
 
 
 
-//what do we do with these do we add them somewhere ?
-/*------------------------------------*\
-    #Utilities
-\*------------------------------------*/
 
-// -----------------------------------------------------------------------------
-// Inline block and block
-// -----------------------------------------------------------------------------
-// zoom fix for IE6/7 so they correctly display inline-block elements
-// (forces hasLayout)
 
-%inline-block {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-}
-
-.inline-block { @extend %inline-block; }
-
-// -----------------------------------------------------------------------------
-// First child helpers
-// -----------------------------------------------------------------------------
-
-//Remove top margin
-%first-child-no-top:first-child {
-    margin-top: 0;
-}
-
-.first-child-no-top {
-    @extend %first-child-no-top;
-}
-
-//Remove top border
-%first-child-no-top-border:first-child {
-    border-top: none;
-}
-
-.first-child-no-top-border {
-   @extend %first-child-no-top-border;
-}
 
 // -----------------------------------------------------------------------------
 // Fix webkit bug
@@ -197,11 +152,6 @@ table {
 .antialiased {
     @extend %antialiased;
 }
-
-
-
-
-
 
 // -----------------------------------------------------------------------------
 // Screen reader content -------------- This is borrowed from Bootstrap.
