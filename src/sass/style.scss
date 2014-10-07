@@ -24,6 +24,17 @@
 @import "config";
 @import "mixins";
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// Accessibility 101
+*:focus {
+    outline: solid 3px $color-focus;
+}
+
 html {
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -44,11 +55,6 @@ body {
 
 // Remove border when inside `a` element in IE 8/9.
 img { border: 0;}
-
-
-%fix-text {
-    -webkit-font-smoothing: antialiased;
-}
 
 %clearfix {
     /**
@@ -87,18 +93,60 @@ img { border: 0;}
 @import "themes";
 @import "components";
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
+
+// -----------------------------------------------------------------------------
+// Fix webkit bug
+// -----------------------------------------------------------------------------
+
+%font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    .isWindowsChrome & {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
 }
 
-// Accessibility 101
-*:focus {
-    outline: solid 3px $color-focus;
+%fix-webkit-font-rendering {
+    @extend %font-smoothing;
+    text-rendering: optimizeLegibility;
 }
 
+%antialiased {
+    @extend %font-smoothing;
+}
 
+.antialiased {
+    @extend %antialiased;
+}
+
+// -----------------------------------------------------------------------------
+// Screen reader content -------------- This is borrowed from Bootstrap.
+// -----------------------------------------------------------------------------
+
+
+%sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.sr-only {  @extend %sr-only; }
+
+
+.font-bold-italic {
+    @extend %font-italic;
+    @extend %font-bold;
+}
+
+.font-light-italic {
+    @extend %font-italic;
+    @extend %font-light;
+}
 
 // -----------------------------------------------------------------------------
 // utilities -- typography
@@ -116,9 +164,9 @@ img { border: 0;}
 .text-right { text-align:right;}
 
 .text-truncate {
-    white-space: nowrap;           
-    overflow: hidden;       
-    text-overflow: ellipsis;   
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 

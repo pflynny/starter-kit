@@ -97,7 +97,6 @@ table {
     opacity: .5;
 }
 
-
 /**
  * Shows errors, especially in forms.
  *
@@ -122,66 +121,6 @@ table {
         }
     }
 }
-
-
-
-
-
-
-// -----------------------------------------------------------------------------
-// Fix webkit bug
-// -----------------------------------------------------------------------------
-
-%font-smoothing {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    .isWindowsChrome & {
-        -webkit-font-smoothing: subpixel-antialiased;
-    }
-}
-
-%fix-webkit-font-rendering {
-    @extend %font-smoothing;
-    text-rendering: optimizeLegibility;
-}
-
-%antialiased {
-    @extend %font-smoothing;
-}
-
-.antialiased {
-    @extend %antialiased;
-}
-
-// -----------------------------------------------------------------------------
-// Screen reader content -------------- This is borrowed from Bootstrap.
-// -----------------------------------------------------------------------------
-
-
-%sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
-}
-
-.sr-only {  @extend %sr-only; }
-
-
-.font-bold-italic {
-    @extend %font-italic;
-    @extend %font-bold;
-}
-
-.font-light-italic {
-    @extend %font-italic;
-    @extend %font-light;
-}
-
 
 
 // -----------------------------------------------------------------------------
