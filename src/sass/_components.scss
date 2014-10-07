@@ -192,6 +192,38 @@
         }
     }
 }
+/**
+ * Throws list items into a collection of inline-blocks
+ */
+
+.nav { /* ul, ol */
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+    font-size: medium;
+
+    & > li {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+/**
+ * Extends `.nav {}`
+ *
+ * Adds spacing between a bunch of inline block nav children.
+ *
+ */
+.nav--links {
+    & > li {
+        margin-right: .5em;
+        line-height: 1;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
 
 /**
  * ---------------------------------------------------------------------------

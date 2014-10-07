@@ -55,45 +55,6 @@ table {
 
 
 
-
-
-
-/**
- * Throws list items into a collection of inline-blocks
- */
-
-.nav { /* ul, ol */
-    margin-top: 0;
-    margin-bottom: 0;
-    list-style: none;
-    padding-left: 0;
-    font-size: medium;
-
-    & > li {
-        display: inline-block;
-        vertical-align: middle;
-    }
-}
-
-/**
- * Extends `.nav {}`
- *
- * Adds spacing between a bunch of inline block nav children.
- *
- */
-.nav--links {
-    & > li {
-        margin-right: .5em;
-        line-height: 1;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
-
-
-
-
 /**
  * ----------------------------------------------------------------------------
  * Typography continued
@@ -114,138 +75,6 @@ table {
     padding-bottom: 1em;
     border-bottom: solid 1px rgba(0,0,0,.2);
 }
-
-
-/**
- * ---------------------------------------------------------------------------
- * Themes
- * ---------------------------------------------------------------------------
- */
-
-
-// .theme-primary {
-//     @extend %fix-text;
-//     background-color: $theme-color;
-//     color: #fff;
-// }
-
-// .theme-night {
-//     @extend %fix-text;
-//     background-color: #222;
-//     color: #fff;
-
-//     a {
-//         color: #fff;
-//     }
-
-//     .leading-rule,
-//     .trailing-rule {
-//         border-color: rgba(255,255,255,.2);
-//     }
-
-//     .btn-outline:hover {
-//         color: #222;
-//     }
-// }
-
-
-// .theme-light {
-//     background-color: #ddd;
-// }
-
-// .theme-xlight {
-//     background-color: #fafafa;
-// }
-
-// .theme-ui {
-//     background-color: #46474B;
-
-// }
-
-
-
-/**
- * ---------------------------------------------------------------------------
- * Utilities
- * ---------------------------------------------------------------------------
- */
-
-.u-center {
-    text-align: center;
-}
-
-.u-middle > * {
-    vertical-align: middle;
-}
-
-.u-strong {
-    font-weight: 600;
-}
-
-.u-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.u-hide {
-    display: none;
-}
-
-
-/**
- * 1. Ensures text doesn't wrap and break your layout
- * 2. Trigger overflow behavior
- * 3. Truncate the text
- */
-.u-truncate {
-    white-space: nowrap;            /* [1] */
-    overflow: hidden;               /* [2] */
-    text-overflow: ellipsis;        /* [3] */
-}
-
-
-@include small-only {
-    .u-hide-small {
-        display: none;
-    }
-
-    .u-center-small {
-        text-align: center;
-    }
-}
-
-
-@include medium {
-    .u-auto-medium {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .u-hide-medium {
-        display: none;
-    }
-
-    .u-center-medium {
-        text-align: center;
-    }
-}
-
-
-@include large {
-    .u-auto-large {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .u-hide-large {
-        display: none;
-    }
-    .u-center-large {
-        text-align: center;
-    }
-}
-
-
 
 
 /**
@@ -295,54 +124,9 @@ table {
 }
 
 
-.is-hidden {
-    display: none;
-}
 
 
 
-
-
-//what do we do with these do we add them somewhere ?
-/*------------------------------------*\
-    #Utilities
-\*------------------------------------*/
-
-// -----------------------------------------------------------------------------
-// Inline block and block
-// -----------------------------------------------------------------------------
-// zoom fix for IE6/7 so they correctly display inline-block elements
-// (forces hasLayout)
-
-%inline-block {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-}
-
-.inline-block { @extend %inline-block; }
-
-// -----------------------------------------------------------------------------
-// First child helpers
-// -----------------------------------------------------------------------------
-
-//Remove top margin
-%first-child-no-top:first-child {
-    margin-top: 0;
-}
-
-.first-child-no-top {
-    @extend %first-child-no-top;
-}
-
-//Remove top border
-%first-child-no-top-border:first-child {
-    border-top: none;
-}
-
-.first-child-no-top-border {
-   @extend %first-child-no-top-border;
-}
 
 // -----------------------------------------------------------------------------
 // Fix webkit bug
@@ -368,11 +152,6 @@ table {
 .antialiased {
     @extend %antialiased;
 }
-
-
-
-
-
 
 // -----------------------------------------------------------------------------
 // Screen reader content -------------- This is borrowed from Bootstrap.
@@ -401,20 +180,6 @@ table {
 .font-light-italic {
     @extend %font-italic;
     @extend %font-light;
-}
-
-
-
-%text--overflow {
-    @extend %inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 100%;
-}
-
-.text--overflow {
-    @extend %text--overflow;
 }
 
 
@@ -509,41 +274,6 @@ table {
     @extend %clean-link;
 }
 
-
-
-// -----------------------------------------------------------------------------
-// radius helpers
-// -----------------------------------------------------------------------------
-
-%br-xxs { @include rem(border-radius, $space-xxs);}
-
-%br-bottom-xxs {
-    @include rem(border-bottom-left-radius, $space-xxs);
-    @include rem(border-bottom-right-radius, $space-xxs);
-}
-
-%br-top-xxs {
-    @include rem(border-top-left-radius, $space-xxs);
-    @include rem(border-top-right-radius, $space-xxs);
-}
-
-%br-left-xxs {
-    @include rem(border-top-left-radius, $space-xxs);
-    @include rem(border-bottom-left-radius, $space-xxs);
-}
-
-%br-right-xxs {
-    @include rem(border-top-right-radius, $space-xxs);
-    @include rem(border-bottom-right-radius, $space-xxs);
-}
-
-%br-top-right-xxs { @include rem(border-top-right-radius, $space-xxs);}
-
-%br-bottom-right-xxs { @include rem(border-bottom-right-radius, $space-xxs);}
-
-%br-top-left-xxs { @include rem(border-top-left-radius, $space-xxs); }
-
-%br-bottom-left-xxs { @include rem(border-bottom-left-radius, $space-xxs);}
 
 %round { border-radius: 50em; }
 

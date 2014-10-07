@@ -69,15 +69,9 @@ img { border: 0;}
     display: table; /* 2 */
 }
 
-.clearfix { @extend %clearfix; }
-
 //Remove top margin
 %first-child-no-top:first-child {
     margin-top: 0;
-}
-
-.first-child-no-top {
-    @extend %first-child-no-top;
 }
 
 //Remove top border
@@ -121,13 +115,10 @@ img { border: 0;}
 .text-left { text-align:left;}
 .text-right { text-align:right;}
 
-
-.text--overflow {
-    @extend %inline-block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 100%;
+.text-truncate {
+    white-space: nowrap;           
+    overflow: hidden;       
+    text-overflow: ellipsis;   
 }
 
 
@@ -143,38 +134,13 @@ img { border: 0;}
 // -----------------------------------------------------------------------------
 // utilities -- Layout
 // -----------------------------------------------------------------------------
+.clearfix { @extend %clearfix; }
 
 .left { float:left; }
 .right { float:right; }
 
-
 .relative { position: relative; }
 .absolute { position: absolute; }
-
-    .absolute--bottom-left {
-        position: absolute;
-        bottom:0;
-        left:0;
-    }
-
-    .absolute--bottom-right {
-        position: absolute;
-        bottom:0;
-        right:0;
-    }
-
-    .absolute--top-left {
-        position: absolute;
-        top:0;
-        left:0;
-    }
-
-    .absolute--top-right {
-        position: absolute;
-        top:0;
-        right:0;
-    }
-
 
 .align--top { vertical-align: top; }
 .align--middle > * { vertical-align: middle; }
@@ -187,6 +153,10 @@ img { border: 0;}
     margin-right:auto;
 }
 
+.auto {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .overflow-hidden { overflow: hidden; }
 
@@ -201,20 +171,6 @@ img { border: 0;}
 }
 
 .block-element { display:block;}
-
-.prepend{
-    &:before{
-        content: attr(data-prepend);
-        display: inline-block;
-    }
-}
-
-.append{
-    &:after{
-        content: attr(data-append);
-        display: inline-block;
-    }
-}
 
 .hide { display: none; }
 .show { display: block; }
@@ -245,9 +201,9 @@ img { border: 0;}
     .text-right--small-down { text-align: right; }
     .text-left--small-down { text-align: left; }
 
-    .append--q-small-down:after {
-        content: attr(data-append-small);
-        display: inline-block;
+    .auto--small-down {
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
@@ -262,9 +218,9 @@ img { border: 0;}
     .text-right--medium { text-align: right; }
     .text-left--medium { text-align: left; }
 
-    .append--q-medium:after {
-        content: attr(data-append-medium);
-        display: inline-block;
+    .auto--medium {
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
@@ -278,9 +234,9 @@ img { border: 0;}
     .text-right--large { text-align: right; }
     .text-left--large { text-align: left; }
 
-    .append--q-large:after {
-        content: attr(data-append-medium);
-        display: inline-block;
+    .auto--large {
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
