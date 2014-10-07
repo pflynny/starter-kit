@@ -91,6 +91,7 @@ img { border: 0;}
 @import "typography";
 @import "layout";
 @import "themes";
+@import "components";
 
 *,
 *:before,
@@ -300,7 +301,6 @@ img { border: 0;}
     cursor: default;
     opacity: .5;
 }
-
 
 .is-visible { visibility: visible ; }
 .is-hidden { visibility: hidden ; }

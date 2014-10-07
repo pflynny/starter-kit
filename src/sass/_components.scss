@@ -72,7 +72,7 @@
     border: none;
     padding-left: $space/2;
     padding-right: $space/2;
-    border-radius: $r-small;
+    border-radius: 2px;
     padding-top: 0;
     padding-bottom: 0;
     margin: 0;
@@ -91,7 +91,7 @@
     padding-left: $space/4;
     padding-right: $space/4;
     line-height: 2;
-    border-radius: $r-tiny;
+
 }
 
 
@@ -121,10 +121,10 @@
  */
 
 .btn-primary {
-    background-color: $theme-color;
+    background-color: #333;
     color: #fff;
     &:hover {
-        background-color: darken($theme-color, 10%);
+        background-color: #555;
         color: #fff;
     }
 }
@@ -154,7 +154,7 @@
     border: solid 1px rgba(255,255,255,0.5);
     color: #fff;
     &:hover {
-        color: $theme-color;
+        // color: $theme-color;
         background: #fff;
         border-color: #fff;
     }
@@ -177,7 +177,7 @@
 
 
 .btn-group {
-    @include small-only {
+    @include small {
         & > .btn {
             margin-bottom: $space/2;
         }
@@ -223,7 +223,7 @@ textarea {
 
 .field:focus {
     outline: none;
-    border-color: $theme-color;
+    // border-color: $theme-color;
     box-shadow: 0 0 3px rgba(0,0,0,0.2);
 }
 

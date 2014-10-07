@@ -1,19 +1,16 @@
-/*------------------------------------*\
-    #ICONS
-\*------------------------------------*/
-
+// -----------------------------------------------------------------------------
+// Icons
+// -----------------------------------------------------------------------------
 
 %i {
-    @extend %inline-block;
-    width: 1em;
-    height: 1em;
     background-size: cover;
-    //display: inline-block;
+    display: inline-block;
+    height: 1em;
     vertical-align: middle;
+    width: 1em;
 }
 
 .i {
-    
     @extend %i;
     .icon-text &,
     .btn--icon & {

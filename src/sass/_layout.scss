@@ -4,6 +4,8 @@
     margin-right: auto;
 }
 
+
+
 // ----------------------------------------------------------------------------
 // Grid
 // ----------------------------------------------------------------------------
@@ -19,12 +21,12 @@
     }
 
     & > * {
-        @extend %inline-block;
+        display: inline-block;
         font-size: medium;
     }
 
     & > .grid {
-        @extend %inline-block;
+        display: inline-block;
         font-size: 0;
     }
 }
@@ -67,7 +69,11 @@
 .col {
     @extend %column-padding;
     width:100%;
+    position: relative;
 }
+
+
+
 
 .gutters { @extend %column-padding;}
 

@@ -2,17 +2,192 @@
     <head>
         <title>Start Kit</title>
         <link rel='stylesheet' href='/assets/css/style.css'>
+        <link rel="stylesheet" href="icons-data-svg.css" media="all">
 
         <script>
             /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
             window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var a=t.document.createElement("link"),r=t.document.getElementsByTagName("script")[0];a.rel="stylesheet",a.href=e[o&&n?0:o?1:2],a.media="only x",r.parentNode.insertBefore(a,r),setTimeout(function(){a.media="all"})},a=new t.Image;a.onerror=function(){o(!1)},a.onload=function(){o(1===a.width&&1===a.height)},a.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
-            grunticon(["/assets/desktop/css/icons-data-svg.css", "/assets/desktop/css/icons-data-png.css", "/assets/desktop/css/icons-fallback.css"]);
+            grunticon(["/assets/css/icons-data-svg.css", "/assets/css/icons-data-png.css", "/assets/css/icons-fallback.css"]);
         </script>
+
+        <style type='text/css'>
+
+            .demo-class {
+                font-size: 12px!important;
+                text-align: center;
+            }
+
+            .theme-debug:before {
+                width: 16px;
+                top: 0;
+                left: 0;
+                content: ' ';
+                display: block;
+                height: 100%;
+                background-color: #ddd;
+                position: absolute;
+
+            }
+            .theme-debug:after {
+                width: 16px;
+                top: 0;
+                right: 0;
+                content: ' ';
+                display: block;
+                height: 100%;
+                background-color: #ddd;
+                position: absolute;
+            }
+
+            .i-example {
+                width: 179.25px;
+                height: 54.75px;
+            }
+
+        </style>
 
     </head>
     <body>
         <div class='wrapper'>
-          <h1>This is the start</h1>
+            <div class='grid'>
+                <div class='one-tenth col theme-debug demo-class'>
+                    <p>10%</p>
+                </div>
+                <div class='one-tenth col theme-debug demo-class'>
+                    <p>10%</p>
+                </div>
+                <div class='one-tenth col theme-debug demo-class'>
+                    <p>10%</p>
+                </div>
+                <div class='one-tenth col theme-debug demo-class'>
+                    <p>10%</p>
+                </div>
+                <div class='one-tenth col theme-debug demo-class'>
+                    <p>10%</p>
+                </div>
+                <div class='one-tenth col theme-debug demo-class'>
+                    <p>10%</p>
+                </div>
+                <div class='one-tenth col theme-debug demo-class'>
+                    <p>10%</p>
+                </div>
+                <div class='one-tenth col theme-debug demo-class'>
+                    <p>10%</p>
+                </div>
+                <div class='one-tenth col theme-debug demo-class'>
+                    <p>10%</p>
+                </div>
+                <div class='one-tenth col theme-debug demo-class'>
+                    <p>10%</p>
+                </div>
+            </div>
+            <div class='grid'>
+                <div class='two-tenths col theme-debug demo-class'>
+                    <p>20%</p>
+                </div>
+                <div class='eight-tenths col theme-debug demo-class'>
+                    <p>80%</p>
+                </div>
+            </div>
+            <div class='grid'>
+                <div class='three-tenths col theme-debug demo-class'>
+                    <p>30%</p>
+                </div>
+                <div class='seven-tenths col theme-debug demo-class'>
+                    <p>70%</p>
+                </div>
+            </div>
+            <div class='grid'>
+                <div class='four-tenths col theme-debug demo-class'>
+                    <p>40%</p>
+                </div>
+                <div class='six-tenths col theme-debug demo-class'>
+                    <p>60%</p>
+                </div>
+            </div>
+            <div class='grid'>
+                <div class='five-tenths col theme-debug demo-class'>
+                    <p>50%</p>
+                </div>
+                <div class='five-tenths col theme-debug demo-class'>
+                    <p>50%</p>
+                </div>
+            </div>
+            <div class='grid grid--middle'>
+                <div class='one-quarter col theme-debug demo-class'>
+                    <p>25%</p>
+                </div>
+                <div class='three-quarters  col theme-debug demo-class'>
+                    <p>75%</p>
+                </div>
+            </div>
+            <div class='grid grid--middle'>
+                <div class='one-third col theme-debug demo-class'>
+                    <p>33.33%</p>
+                </div>
+                <div class='two-thirds  col theme-debug demo-class'>
+                    <p>66.66%</p>
+                </div>
+            </div>
         </div>
+
+        <div class="wrapper">
+            <div class="grid ">
+                <div class="col">
+                    <h1>
+                        h1.Heading size
+                    </h1>
+                    <h2>
+                        h2.Heading size
+                    </h2>
+                    <h3>
+                        h3.Heading size
+                    </h3>
+                    <h4>
+                        h4.Heading size
+                    </h4>
+                    <h5>
+                        h5.Heading size
+                    </h5>
+                    <h6>
+                        h6.Heading size
+                    </h6>
+                    <p class="intro">
+                        This is an intro paragraph
+                    </p>
+                    <p>
+                        I am a normal paragraph
+                    </p>
+                    <p class="small">
+                        This is a small paragraph
+                    </p>
+                    <p class="tiny">
+                        This is a tiny paragraph
+                    </p>
+
+                    <a href='' class='btn btn-secondary'>Basic button</a>
+                    <a href='' class='btn btn--small btn-secondary'>Small button</a>
+                    <a href='' class='btn btn--large btn-secondary'>Large button</a>
+                    <hr>
+                    <a href='' class='btn btn--block btn-primary'>Block button</a>
+                    <hr>
+                    <a href='' class='btn btn--circle'>Circle button</a>
+                    <a href='' class='btn btn-primary'>Primary button</a>
+                    <a href='' class='btn btn-secondary'>Secondary button</a>
+                    <a href='' class='btn btn-tertiary'>Tertiary button</a>
+
+                    <hr>
+
+                    <i class='i i-example'></i>
+                    <i class='i i-arrow-sml'></i>
+                    <i class='i i-icon-external-link i--red'></i>
+                    <i class='i i-twitter-sml i--orange'></i>
+                    <i class='i i-twitter-sml i--blue'></i>
+
+
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
